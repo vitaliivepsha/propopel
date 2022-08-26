@@ -112,6 +112,16 @@ $(function () {
         $(this).toggleClass("active").next(".advantages-list__body").slideToggle();
     });
 
+    $('.header-btn').magnificPopup({
+        callbacks: {
+            open: function() {
+                setTimeout(function () {
+                    $('.consult-form input[name="name"]').focus();
+                }, 100);
+            }
+        }
+    });
+
     // input value
     //
     // $('.input, .textarea').blur(function () {
