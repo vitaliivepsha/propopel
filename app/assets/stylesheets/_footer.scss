@@ -1,0 +1,36 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  min-height: 84px;
+  padding-left: 65px;
+  padding-right: 65px;
+  @include bp(xs) {
+    padding: 0;
+    }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  @include bp(sm) {
+    display: block;
+    padding: 33px 0;
+    }
+  & span {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(#000, 0.4);
+    & + span {
+      @include bp(sm) {
+
+        }
+      margin-top: 33px;
+    }
+  }
+}

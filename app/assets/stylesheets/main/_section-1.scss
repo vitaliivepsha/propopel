@@ -1,0 +1,60 @@
+.main-section {
+  height: 100%;
+  padding-top: 111px;
+  padding-bottom: 28px;
+}
+
+.main-bg {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+
+  & picture {
+    width: 100%;
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include bp(lg) {
+        height: 615px;
+        }
+
+    }
+  }
+}
+
+.main-title {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+
+  & svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  & span {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #fff;
+    @include bp(sm) {
+      font-size: 28px;
+      }
+    @include bp(xs) {
+      font-size: 24px;
+      }
+    @include bp(xxs) {
+      font-size: 18px;
+    }
+  }
+}
