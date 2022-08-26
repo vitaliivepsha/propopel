@@ -82,7 +82,6 @@ $(function () {
         e.stopPropagation();
     });
 
-
     //lang
 
     $('.header-lang__inner span').click(function () {
@@ -182,6 +181,7 @@ $(function () {
     //     });
     // });
 
+    $("#phone").mask("+31 ( 99 ) 999 9999");
 
     // lazy load
     var lazyload = function () {
@@ -202,3 +202,4 @@ $(function () {
     };
     $(window).scroll(lazyload);
 });
+

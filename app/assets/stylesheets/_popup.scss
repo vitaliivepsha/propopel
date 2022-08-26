@@ -1,6 +1,5 @@
 .mfp-bg{
-  background: rgba(0, 49, 116, 0.5);
-  backdrop-filter: blur(10px);
+  background: $bg;
   z-index: 10005;
   opacity: 1;
 }
@@ -12,26 +11,25 @@
 .mfp-container{
   @media (max-width: 900px){
     padding: 0;
+
   }
 }
 
 .popup{
   position: relative;
   margin: 0 auto;
-  // background-color: $blue;
-  width: 730px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   background-color: $bg;
+  width: 1440px;
   max-width: calc(100vw - 30px);
-  padding: 60px 145px 80px 160px;
-  color: #fff;
-  @include bp(sm){
-    padding: 60px 60px 80px 60px;
-  }
-  @include bp(xs){
-    padding: 40px 15px 75px;
-  }
+  height: 100vh;
+  max-height: calc(100vw - 30px);
+
   .mfp-close{
-    top: 20px;
-    right: 16px;
+    top: 50px;
+    right: 30px;
     opacity: 1;
     width: 37px;
     height: 37px;
@@ -53,21 +51,6 @@
         }
       }
     }
-  }
-}
-
-.popup-title{
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 44px;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 42px;
-  @include bp(xs){
-    text-align: center;
-    margin-bottom: 27px;
-    font-size: 18px;
-    line-height: 22px;
   }
 }
 

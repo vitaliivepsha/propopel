@@ -1,57 +1,49 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-wrapper">
-    <span>Saproinvest B.V. All Rights Reserved.</span>
-    <span>Website Development: ProArea Digital Agency</span>
+            <span>Saproinvest B.V. All Rights Reserved.</span>
+            <span>Website Development: ProArea Digital Agency</span>
         </div>
     </div>
 </footer>
 <div class="mfp-hide">
-  <div class="popup" id="question-popup">
-    <button title="Close (Esc)" type="button" class="mfp-close">
-      <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M24.0349 10.792L18.5003 16.3266L12.9657 10.792L10.792 12.9657L16.3266 18.5003L10.792 24.0349L12.9657 26.2087L18.5003 20.6741L24.0349 26.2087L26.2087 24.0349L20.6741 18.5003L26.2087 12.9657L24.0349 10.792Z"
-          fill="white" />
-      </svg>
-    </button>
-    <span class="popup-title">Свяжитесь с нами!</span>
-    <form class="consult-form ajax_form clear-styles" data-error-title="Ошибка отправки!"
-      data-error-message="Попробуйте еще раз через некоторое время." data-success-title="Спасибо за сообщение"
-      data-success-message="Наш менеджер свяжется с Вами в ближайшее время.">
-      <div class="radio-wrapper">
-        <span>Связаться как:</span>
-        <div class="radio">
-          <input type="radio" name="type" id="r1">
-          <label for="r1">Поставщик</label>
-        </div>
-        <div class="radio">
-          <input type="radio" name="type" id="r2">
-          <label for="r2">Дистрибьютор</label>
-        </div>
-        <div class="radio">
-          <input type="radio" name="type" id="r3">
-          <label for="r3">Потребитель</label>
-        </div>
-      </div>
-      <div class="input-wrapper">
-        <input class="input" type="text" name="name" placeholder="Имя" data-title="Имя"
-          data-validate-required="Обязательное поле">
-      </div>
-      <div class="form-row">
-        <div class="input-wrapper">
-          <input class="input" type="email" name="email" placeholder="Email" data-title="Email"
-            data-validate-required="Обязательное поле" data-validate-email="Неправильный email">
-        </div>
-        <div class="input-wrapper">
-          <input class="input" type="tel" name="phone" placeholder="Телефон" data-title="Телефон"
-            data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер">
-        </div>
-      </div>
-      <div class="input-wrapper">
-        <input class="input" type="text" name="comment" placeholder="Текст сообщения" data-title="Сообщение"
-          data-validate-required="Обязательное поле">
-      </div>
-      <button type="submit" class="btn btn-tr">Задать вопрос</button>
-    </form>
-  </div>
+    <div class="popup" id="get-popup">
+        <button title="Close (Esc)" type="button" class="mfp-close">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.6">
+                    <path d="M4 8L28 24" stroke="black" stroke-width="3"/>
+                    <path d="M28.0452 8.06815L3.95485 23.9318" stroke="black" stroke-width="3"/>
+                </g>
+            </svg>
+        </button>
+
+        <form class="consult-form ajax_form clear-styles" data-error-title="Send error!"
+              data-error-message="Try again after a while." data-success-title="Thank you for contacting us!"
+              data-success-message="We have recived your message. We’ll reach you out immediately!">
+
+            <div class="input-wrapper">
+                <label  for="name">Name</label>
+                <input id="name" class="input q" type="text" name="name" data-title="Name"
+                       data-validate-required="Please enter your name" autofocus>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="phone">Phone</label>
+                <input id="phone" class="input" type="tel" name="phone" data-title="Phone"
+                       data-validate-required="Please enter your phone number">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="e-mail">E-mail</label>
+                <input id="e-mail" class="input" type="text" name="email" data-title="Email"
+                       data-validate-required="Please enter your email" data-validate-email="Wrong email">
+            </div>
+
+            <div class="input-wrapper input-wrapper-textarea">
+                <label for="request">Text of you request</label>
+                    <textarea rows="4" id="request" class="textarea" name="comment" data-title="Message"
+                              data-validate-required="Please enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </div>

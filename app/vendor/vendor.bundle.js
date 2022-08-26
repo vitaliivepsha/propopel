@@ -12827,7 +12827,7 @@ var vendor_lib =
 	          if (typeof button.data('error') !== 'undefined') {
 	            var text = button.data('error');
 	          } else {
-	            var text = 'Не вышло :(';
+	            var text = 'Error :(';
 	          }
 	          button.html(text);
 	          form.trigger('error', response);
