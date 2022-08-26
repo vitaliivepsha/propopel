@@ -1,6 +1,6 @@
 .advantages-section {
   padding-top: 255px;
-  padding-bottom: 264px;
+  padding-bottom: 80px;
   @include bp(sm) {
     padding-top: 81px;
     padding-bottom: 168px;
@@ -105,11 +105,26 @@
   top: 46px;
   right: calc(100% - 93px);
   z-index: -1;
+  transition: all ease-in-out 0.2s;
+  @include bp(sm) {
+    top: -93px;
+    right: -18px;
+    }
+  &.animated {
+    & picture {
+      transition: all ease-in-out 0.2s;
+      transform: rotate(180deg);
+    }
+
+  }
 
   & img {
     display: block;
     max-width: 530px;
     height: auto;
+    @include bp(sm) {
+      max-width: 363px;
+      }
   }
 }
 

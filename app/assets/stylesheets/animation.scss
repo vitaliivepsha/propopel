@@ -34,6 +34,20 @@
 }
 
 /* CSS Animations (extracted from http://glifo.uiparade.com/) */
+@-webkit-keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-90deg);
+  }
+}
+
+
+
+
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -554,3 +568,12 @@
   -o-animation-name: moveUp;
   animation-name: moveUp;
 }
+
+.animated.rotate {
+  -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
+}
+
+

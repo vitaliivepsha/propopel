@@ -5,10 +5,69 @@
   left: 0;
   width: 100%;
   z-index: 10000;
-  padding-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 65px;
   padding-right: 65px;
   transition: all ease-in-out 0.2s;
+  background-color: $bg;
+
+  &#about {
+    background-color: transparent;
+
+    & .header-menu a {
+      color: #fff;
+
+      &:hover {
+        color: $action;
+      }
+    }
+
+    & .header-lang__inner {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: transparent;
+      color: #fff;
+
+      & svg path {
+        fill: rgba(#FFFFFF, 0.6);
+      }
+
+      & span {
+        color: #fff;
+      }
+
+      & a {
+        color: #fff;
+
+        &:hover {
+          color: $action;
+        }
+      }
+    }
+
+    & .header-logo {
+      position: relative;
+
+      & .logo {
+        opacity: 0;
+      }
+
+      & .logo-white {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+      }
+    }
+    
+    & .mobile-menu__btn { 
+        & svg path {
+          fill: #fff;
+        }
+    }
+  }
+
+
   @include bp(lg) {
     padding-left: 10px;
     padding-right: 10px;
@@ -26,8 +85,22 @@
 }
 
 .header-logo {
+  position: relative;
 
+  & .logo {
+    opacity: 1;
+    transition: all ease-in-out 0.2s;
+  }
+
+  & .logo-white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+  }
 }
+
 
 .header-right {
   display: flex;
@@ -41,6 +114,7 @@
   align-items: center;
   gap: 42px;
   margin-right: 40px;
+
   @include bp(md) {
     display: none;
   }
@@ -56,13 +130,14 @@
       line-height: 21px;
       color: #000000;
       text-decoration: none;
-      @media (max-width: 1440px) {
-        font-size: 16px;
-        line-height: 19px;
-      }
 
       &:hover {
         color: $action;
+      }
+
+      @media (max-width: 1440px) {
+        font-size: 16px;
+        line-height: 19px;
       }
     }
   }
@@ -85,6 +160,7 @@
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+  background-color: $bg;
 
   & span {
     display: flex;
@@ -124,6 +200,10 @@
     color: #000000;
     text-decoration: none;
     cursor: pointer;
+
+    &:hover {
+      color: $action;
+    }
   }
 }
 
@@ -251,7 +331,7 @@
   //}
 }
 
-.mobile-menu__inner{
+.mobile-menu__inner {
   margin: 0 auto;
   display: flex;
   flex-direction: column;

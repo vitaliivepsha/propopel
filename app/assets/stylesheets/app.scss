@@ -18,16 +18,16 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  //@include bp(md) {
-  //  display: block;
-  //}
+  @include bp(md) {
+    display: block;
+  }
 
   &.menu-opened {
     @include bp(md) {
       overflow: hidden;
     }
 
-    .header {
+    & .header {
       background-color: transparent;
     }
 
@@ -38,6 +38,17 @@ body {
       visibility: visible;
     }
 
+    & .header-logo {
+      position: relative;
+
+      & .logo {
+        opacity: 1 !important;
+      }
+
+      & .logo-white {
+        opacity: 0 !important;
+      }
+    }
   }
 }
 
