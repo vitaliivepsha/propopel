@@ -33,6 +33,7 @@ $(function () {
     setTimeout(function () {
         $('body').trigger('scroll');
         $(window).trigger('resize');
+        // $(window).on('scroll', doAnimations);
     }, 100);
 
 
@@ -83,6 +84,8 @@ $(function () {
     });
 
     //lang
+
+
 
     $('.header-lang__inner span').click(function () {
         $(this).parent().toggleClass('active');
@@ -183,6 +186,23 @@ $(function () {
 
     $("#phone").mask("+31 ( 99 ) 999 9999");
 
+    // animation
+    var doAnimations = function () {
+        var offset = $(window).scrollTop() + $(window).height(),
+            $animatables = $('.animate');
+        if ($animatables.length == 0) {
+            $(window).off('scroll', doAnimations);
+        }
+        $animatables.each(function (i) {
+            var $animatable = $(this);
+            if (($animatable.offset().top + $animatable.height() - 1000) < offset) {
+                $animatable.removeClass('animate').addClass('animated');
+            }
+        });
+    };
+
+
+
     // lazy load
     var lazyload = function () {
         var scroll = $(window).scrollTop() + $(window).height() * 3;
@@ -200,6 +220,9 @@ $(function () {
             }
         });
     };
+
+
     $(window).scroll(lazyload);
+
 });
 
