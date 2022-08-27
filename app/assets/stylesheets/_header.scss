@@ -23,25 +23,35 @@
       }
     }
 
+    & .header-lang {
+      & .header-lang__current {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        & span {
+          color: #fff;
+
+          & svg path {
+            fill: rgba(#fff, 0.6);
+          }
+        }
+      }
+    }
+    
     & .header-lang__inner {
       border: 1px solid rgba(255, 255, 255, 0.2);
-      background: transparent;
-      color: #fff;
-
-      & svg path {
-        fill: rgba(#FFFFFF, 0.6);
+      background-color: transparent;
+      & div + div {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
       }
-
       & span {
         color: #fff;
-      }
 
+        & svg path {
+          fill: rgba(#fff, 0.6);
+        }
+      }
       & a {
         color: #fff;
-
-        &:hover {
-          color: $action;
-        }
       }
     }
 
@@ -59,11 +69,15 @@
         opacity: 1;
       }
     }
+
+    & .mobile-menu__btn {
+      & svg path {
+        fill: #fff;
+      }
+    }
     
-    & .mobile-menu__btn { 
-        & svg path {
-          fill: #fff;
-        }
+    & .header-btn {
+      color: #fff;
     }
   }
 
@@ -151,70 +165,118 @@
   @include bp(md) {
     display: none;
   }
+
+  &.active {
+    & .header-lang__inner {
+      display: block;
+    }
+
+    & .header-lang__current {
+      & span svg {
+        transform: scale(1, -1);
+      }
+    }
+  }
+}
+
+
+.header-lang__current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+
+  & span {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #000000;
+
+    & i {
+      margin-top: -1px;
+      margin-left: 7px;
+
+      & svg {
+
+      }
+    }
+  }
 }
 
 .header-lang__inner {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  top: calc(100% + 5px);
+  left: -11px;
+  width: 87px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   background-color: $bg;
+  display: none;
 
-  & span {
+  & > div {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    width: 100%;
-    height: 44px;
-    padding-left: 12px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
-    color: #000000;
-    cursor: pointer;
+    height: 45px;
 
-    & i {
+    & + div {
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    & span,
+    & a {
       display: flex;
-      justify-content: center;
+      justify-content: end;
       align-items: center;
+      gap: 14px;
+      width: 100%;
+      padding-right: 24px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #000000;
+      text-decoration: none;
+      cursor: default;
 
-      & svg {
-        width: 100%;
+      & i {
+        margin-top: 2px;
+        flex-shrink: 0;
       }
     }
-  }
 
-  & a {
-    display: none;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    padding-left: 12px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
-    color: #000000;
-    text-decoration: none;
-    cursor: pointer;
+    & a {
+      position: relative;
+      z-index: 1;
 
-    &:hover {
-      color: $action;
-    }
-  }
-}
+      &:hover {
+        color: #fff;
+        cursor: pointer;
 
-.header-lang__inner.active {
-  & a {
-    display: flex;
-  }
+        &:before {
+          opacity: 1;
+          transition: all ease-in-out 0.2s;
+        }
+      }
 
-  & span {
-    & i {
-      transform: scale(1, -1);
+      &:before {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        right: 3px;
+        z-index: -1;
+        width: 78px;
+        height: 39px;
+        background: #0093AF;
+        border-radius: 12px;
+        transition: all ease-in-out 0.2s;
+      }
     }
   }
 }
@@ -323,7 +385,7 @@
     padding: 60px 15px 120px;
     visibility: hidden;
     transition: opacity ease-in-out 0.2s;
-    overflow: auto;
+    overflow-y: auto;
     opacity: 0;
   }
   //@media only screen and (max-height: 599px) {
@@ -434,7 +496,7 @@
   background-color: $bg;
   transform: scale(0.8);
   transition: transform ease-in-out 0.2s;
-  bottom: -14px;
+  bottom: -12px;
   @include bp(xs) {
     padding-bottom: 32px;
 

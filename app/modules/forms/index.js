@@ -369,7 +369,7 @@ module.exports = function () {
                     if (typeof button.data('sent') !== 'undefined') {
                         var text = button.data('sent');
                     } else {
-                        var text = 'Отправлено';
+                        var text = 'Sent';
                     }
                     button.html(text);
 
@@ -378,11 +378,11 @@ module.exports = function () {
                         if (typeof form.data('success-title') !== 'undefined' || typeof form.data('success-message') !== 'undefined') {
                             swal({
                                 showCancelButton: true,
-                                timer: 3000
+                                // timer: 3000
                             });
                             swal(form.data('success-title'), form.data('success-message'), 'success').then(() => {
                                 location.reload(true);
-                                tr.hide();
+                                // tr.hide();
                             });
                         }
                         if (typeof form.data('success-redirect') !== 'undefined') {

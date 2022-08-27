@@ -12794,7 +12794,7 @@ var vendor_lib =
 	                    if (typeof button.data('sent') !== 'undefined') {
 	                        var text = button.data('sent');
 	                    } else {
-	                        var text = 'Отправлено';
+	                        var text = 'Sent';
 	                    }
 	                    button.html(text);
 

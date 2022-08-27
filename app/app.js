@@ -70,6 +70,15 @@ $(function () {
         });
     }
 
+  if($('body.menu-opened').has($('.swal2-shown')))  {
+      $('body').removeClass('menu-opened');
+  }
+
+
+    $('.mobile-menu li a').click(function() {
+        $('body').removeClass("menu-opened");
+    })
+
     $(touch).click(function (e) {
         e.preventDefault();
         $('body').toggleClass('menu-opened');
@@ -82,18 +91,18 @@ $(function () {
         e.stopPropagation();
     });
 
+
     //lang
 
-
-    $('.header-lang__inner span').click(function () {
+    $('.header-lang__current').click(function () {
         $(this).parent().toggleClass('active');
     });
 
     $(document).click(function () {
-        $(".header-lang__inner").removeClass("active");
+        $(".header-lang").removeClass("active");
     });
 
-    $(document).on("click", ".header-lang__inner", function (e) {
+    $(document).on("click", ".header-lang", function (e) {
         e.stopPropagation();
     });
 
