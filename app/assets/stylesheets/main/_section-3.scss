@@ -2,6 +2,10 @@
   padding-top: 255px;
   padding-bottom: 80px;
   background-color: $bg;
+  @include bp(md) {
+    padding-bottom: 0px;
+    }
+
   @include bp(sm) {
     padding-top: 81px;
     padding-bottom: 168px;

@@ -78,6 +78,7 @@ $(function () {
 
     $('.mobile-menu li a').click(function() {
         $('body').removeClass("menu-opened");
+        $('.mobile-menu__btn').removeClass("active");
     })
 
     $(touch).click(function (e) {

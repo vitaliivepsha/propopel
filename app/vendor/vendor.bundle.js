@@ -12803,11 +12803,11 @@ var vendor_lib =
 	                        if (typeof form.data('success-title') !== 'undefined' || typeof form.data('success-message') !== 'undefined') {
 	                            swal({
 	                                showCancelButton: true,
-	                                timer: 3000
+	                                // timer: 3000
 	                            });
 	                            swal(form.data('success-title'), form.data('success-message'), 'success').then(() => {
 	                                location.reload(true);
-	                                tr.hide();
+	                                // tr.hide();
 	                            });
 	                        }
 	                        if (typeof form.data('success-redirect') !== 'undefined') {
