@@ -1,52 +1,68 @@
-.mfp-bg{
+.mfp-bg {
   background: $bg;
   z-index: 10005;
   opacity: 1;
 }
 
-.mfp-wrap{
+.mfp-wrap {
   z-index: 10006;
 }
 
-.mfp-container{
-  @media (max-width: 900px){
+.mfp-container {
+  position: fixed;
+  @media (max-width: 900px) {
     padding: 0;
 
   }
 }
 
-.popup{
+.popup {
   position: relative;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-   background-color: $bg;
+  background-color: $bg;
   width: 1440px;
   max-width: calc(100vw - 30px);
   height: 100vh;
   max-height: calc(100vw - 30px);
 
-  .mfp-close{
+  .mfp-close {
     top: 50px;
     right: 30px;
     opacity: 1;
     width: 37px;
     height: 37px;
-    @include bp(xs){
+    @include bp(sm) {
+      top: 0;
+    }
+
+    @include bp(xs) {
       right: 5px;
       top: 5px;
       width: 26px;
       height: 26px;
     }
-    svg{
+    @media (max-width: 570px) {
+      top: -50px;
+    }
+    @media (max-width: 480px) {
+      top: -100px;
+      }
+    @media (max-width: 360px) {
+      top: -150px;
+    }
+
+    svg {
       width: 100%;
       height: 100%;
       pointer-events: none;
     }
-    &:hover{
-      svg{
-        path{
+
+    &:hover {
+      svg {
+        path {
           // fill: $light;
         }
       }
@@ -54,7 +70,7 @@
   }
 }
 
-.swal2-container.swal2-shown{
+.swal2-container.swal2-shown {
   background: transparent;
   z-index: 10037;
 }
@@ -74,12 +90,13 @@
   opacity: 1;
   width: 69px !important;
   height: 79px !important;
+
   &:hover {
     opacity: 0.7;
   }
 }
 
-.swal2-modal{
+.swal2-modal {
   width: 466px !important;
   height: 298px;
   background: $bg !important;
@@ -90,11 +107,13 @@
   background-image: url("../images/success.svg") !important;
   background-position: top 47px center !important;
   background-repeat: no-repeat !important;
-  .swal2-icon{
+
+  .swal2-icon {
     //display: none !important;
     padding-bottom: 0;
   }
-  .swal2-title{
+
+  .swal2-title {
     margin-bottom: 17px;
     font-family: $default;
     font-weight: 700;
@@ -104,13 +123,14 @@
     text-align: center;
     color: #000;
 
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 28px;
     }
   }
-  .swal2-content{
+
+  .swal2-content {
     font-family: $default;
     font-weight: 400;
     font-size: 16px;
@@ -118,9 +138,10 @@
     text-align: center;
     color: #000;
   }
-  .swal2-buttonswrapper{
+
+  .swal2-buttonswrapper {
     margin-top: 45px;
-    @include bp(xs){
+    @include bp(xs) {
       margin-top: 25px;
     }
   }
@@ -129,7 +150,7 @@
     display: none !important;
   }
 
-  .swal2-styled{
+  .swal2-styled {
     margin: 0 auto;
     width: 220px;
     height: 50px;
@@ -143,13 +164,14 @@
     border-radius: 30px;
     outline: none !important;
     box-shadow: none !important;
-    @include bp(xs){
+    @include bp(xs) {
       height: 40px;
       width: 174px;
       font-size: 14px;
       line-height: 17px;
     }
-    &:hover{
+
+    &:hover {
       // color: $blue;
       background-color: #fff !important;
     }

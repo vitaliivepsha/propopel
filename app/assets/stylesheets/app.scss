@@ -180,6 +180,12 @@ textarea:-webkit-autofill:hover {
     transition: all ease-in-out 0.2s;
     font-size: 20px;
     line-height: 24px;
+    @include bp(xs) {
+      font-size: 18px;
+      }
+    @include bp(xxs) {
+      font-size: 16px;
+      }
 
     &:focus {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -198,6 +204,12 @@ textarea:-webkit-autofill:hover {
     overflow-y: auto;
     margin-bottom: -1px;
     transition: all ease-in-out 0.2s;
+    @include bp(xs) {
+      font-size: 18px;
+    }
+    @include bp(xxs) {
+      font-size: 16px;
+    }
 
     &:focus {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -229,6 +241,12 @@ textarea:-webkit-autofill:hover {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+    @include bp(xs) {
+      font-size: 18px;
+    }
+    @include bp(xxs) {
+      font-size: 16px;
+      }
   }
 }
 
@@ -244,6 +262,12 @@ textarea:-webkit-autofill:hover {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  @include bp(xs) {
+    font-size: 14px;
+  }
+  @include bp(xxs) {
+    font-size: 12px;
+  }
 }
 
 button.btn {

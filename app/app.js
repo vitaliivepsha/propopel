@@ -33,8 +33,9 @@ $(function () {
     setTimeout(function () {
         $('body').trigger('scroll', doAnimations);
         $(window).trigger('resize');
+        $('body').css('opacity', '1');
     }, 100);
-
+    $('body').css('display', 'block');
 
     // fixed header
 

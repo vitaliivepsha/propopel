@@ -26,6 +26,7 @@
 }
 
 .advantages-title {
+  position: relative;
   display: block;
   max-width: 690px;
   margin-bottom: 64px;
@@ -34,6 +35,7 @@
   font-size: 76px;
   line-height: 91px;
   color: #000000;
+  z-index: 1;
   @media (max-width: 1440px) {
     font-size: 56px;
     line-height: 67px;

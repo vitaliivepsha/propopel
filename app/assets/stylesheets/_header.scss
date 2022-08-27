@@ -11,7 +11,6 @@
   padding-right: 65px;
   transition: all ease-in-out 0.2s;
   background-color: $bg;
-
   &#about {
     background-color: transparent;
 
@@ -91,7 +90,7 @@
     padding-right: 0;
   }
 
-  & .container {
+  &  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
