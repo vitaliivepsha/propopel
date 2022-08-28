@@ -22,7 +22,20 @@ body {
     display: block;
   }
 
+  &.swal2-shown {
+    & .mfp-bg {
+      //display: none !important;
+      z-index: 0;
+    }
+
+    & .mfp-wrap {
+      display: none !important;
+    }
+  }
+
   &.menu-opened {
+
+
     @include bp(md) {
       overflow: hidden;
     }
@@ -47,6 +60,8 @@ body {
       }
     }
   }
+
+
 }
 
 ol,
@@ -174,13 +189,13 @@ textarea:-webkit-autofill:hover {
     line-height: 24px;
     @include bp(xs) {
       font-size: 18px;
-      }
+    }
     @media (max-width: 420px) {
       padding-bottom: 10px;
-      }
+    }
     @include bp(xxs) {
       font-size: 16px;
-      }
+    }
 
     &:focus {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -241,7 +256,7 @@ textarea:-webkit-autofill:hover {
     }
     @include bp(xxs) {
       font-size: 16px;
-      }
+    }
   }
 }
 

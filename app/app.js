@@ -71,15 +71,25 @@ $(function () {
         });
     }
 
-  if($('body.menu-opened').has($('.swal2-shown')))  {
-      $('body').removeClass('menu-opened');
-  }
+    // form popup
+
+    $('.btn').click(function() {
+        $('body').removeClass("menu-opened");
+        $('.mobile-menu__btn').removeClass("active");
+    })
+    //
+    // $('form').on('submit', function(event) {
+    //     $('body').addClass("actifegdfgdgdfgdfgve");
+    // })
+
+    // ===
 
 
     $('.mobile-menu li a').click(function() {
         $('body').removeClass("menu-opened");
         $('.mobile-menu__btn').removeClass("active");
     })
+
 
     $(touch).click(function (e) {
         e.preventDefault();
@@ -92,9 +102,6 @@ $(function () {
     $(document).on('click', '.mobile-menu__wrapper', function (e) {
         e.stopPropagation();
     });
-
-
-    //lang
 
     $('.header-lang__current').click(function () {
         $(this).parent().toggleClass('active');
@@ -124,12 +131,12 @@ $(function () {
         $(this).toggleClass("active").next(".advantages-list__body").slideToggle();
     });
 
-    $('.header-btn').magnificPopup({
+    $('.header-btn, .popup-btn').magnificPopup({
         callbacks: {
             open: function () {
                 setTimeout(function () {
                     $('.consult-form input[name="name"]').focus();
-                }, 100);
+                }, 400);
             }
         }
     });
