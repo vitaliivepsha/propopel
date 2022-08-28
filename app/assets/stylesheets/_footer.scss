@@ -32,9 +32,9 @@
     color: rgba(#000, 0.4);
     & + span {
       @include bp(sm) {
-
+        margin-top: 33px;
         }
-      margin-top: 33px;
+
     }
   }
 }
