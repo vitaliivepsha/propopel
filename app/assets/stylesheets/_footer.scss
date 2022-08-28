@@ -1,11 +1,15 @@
 .footer{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   min-height: 84px;
+  margin-top: -1px;
   padding-left: 65px;
   padding-right: 65px;
+  background-color: $bg;
+  z-index: 1;
   @include bp(xs) {
     padding: 0;
     }
@@ -28,9 +32,9 @@
     color: rgba(#000, 0.4);
     & + span {
       @include bp(sm) {
-
+        margin-top: 33px;
         }
-      margin-top: 33px;
+
     }
   }
 }

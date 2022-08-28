@@ -1,6 +1,17 @@
 .contacts-section {
+  margin-top: -1px;
+  padding-top: 184px;
   padding-bottom: 100px;
+@include bp(md) {
+  padding-top: 264px;
+  }
+
+  background-color: $bg;
+  @include bp(sm) {
+    padding-top: 0
+    }
   @include bp(xs) {
+
     padding-bottom: 55px;
     }
 
@@ -90,6 +101,7 @@
   margin-top: -39px;
   height: 100%;
   transition: all ease-in-out 0.2s;
+  pointer-events: none;
   @media (max-width: 1500px) {
     margin-top: -68px;
   }
@@ -417,6 +429,7 @@
   display: none;
   @media (max-width: 530px) {
     display: block;
+    margin: 0 auto;
   }
   width: 100%;
   max-width: 330px;

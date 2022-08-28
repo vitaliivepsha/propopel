@@ -1,6 +1,11 @@
 .advantages-section {
   padding-top: 255px;
-  padding-bottom: 264px;
+  padding-bottom: 80px;
+  background-color: $bg;
+  @include bp(md) {
+    padding-bottom: 0px;
+    }
+
   @include bp(sm) {
     padding-top: 81px;
     padding-bottom: 168px;
@@ -25,6 +30,7 @@
 }
 
 .advantages-title {
+  position: relative;
   display: block;
   max-width: 690px;
   margin-bottom: 64px;
@@ -33,6 +39,7 @@
   font-size: 76px;
   line-height: 91px;
   color: #000000;
+  z-index: 1;
   @media (max-width: 1440px) {
     font-size: 56px;
     line-height: 67px;
@@ -104,12 +111,27 @@
   position: absolute;
   top: 46px;
   right: calc(100% - 93px);
-  z-index: -1;
+  z-index: 0;
+  transition: all ease-in-out 0.2s;
+  @include bp(sm) {
+    top: -93px;
+    right: -18px;
+    }
+  &.animated {
+    & picture {
+      transition: all ease-in-out 0.2s;
+      transform: rotate(180deg);
+    }
+
+  }
 
   & img {
     display: block;
     max-width: 530px;
     height: auto;
+    @include bp(sm) {
+      max-width: 363px;
+      }
   }
 }
 

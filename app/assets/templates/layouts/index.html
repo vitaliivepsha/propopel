@@ -14,98 +14,99 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#003174">
 </head>
 
-<body>
+<body style="display: none; opacity: 0; transition: opacity 0.6s linear;">
 
 ${require('../parts/header.html')}
 
-<div class="section main-section">
-    <div class="main-title">
-        <svg width="960" height="127" viewBox="0 0 960 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g style="mix-blend-mode:overlay">
+<div class="section main-section" id="main" data-id="main">
+    <div class="main-section__wrapper">
+        <div class="main-title">
+            <svg width="960" height="127" viewBox="0 0 960 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:overlay">
+                    <path
+                        d="M56.0219 127C85.3499 127 109.234 114.648 109.234 89.4219C109.234 63.5 85.3499 55.8452 61.8172 49.0603C45.1336 44.189 32.4892 40.5356 32.4892 29.5753C32.4892 19.4849 44.0799 15.4836 54.9682 15.4836C72.5299 15.4836 84.9987 25.226 87.9842 42.4493H106.775C103.965 13.7438 80.7839 0 53.3876 0C28.9768 0 3.16111 10.6123 3.16111 36.7082C3.16111 62.4562 28.0987 70.111 49.1728 76.548C67.437 81.7671 78.5009 85.5945 78.5009 96.7288C78.5009 106.993 67.9638 111.864 54.2657 111.864C35.8259 111.864 21.0741 101.6 18.2642 83.5069H0C2.80987 112.212 26.1669 127 56.0219 127Z"
+                        fill="white"/>
+                    <path
+                        d="M114.011 124.39H132.978L144.393 92.9014H191.458L202.873 124.39H237.997L192.512 2.60959H159.672L114.011 124.39ZM149.135 78.2877L167.399 28.0096H168.452L186.717 78.2877H149.135Z"
+                        fill="white"/>
+                    <path
+                        d="M253.415 124.39H286.256V78.1137H301.359C334.551 78.1137 353.342 63.8479 353.342 40.3616C353.342 16.8753 334.551 2.60959 301.359 2.60959H253.415V124.39ZM286.256 63.5V18.4411H301.008C313.125 18.4411 320.326 26.7918 320.326 41.0575C320.326 55.3233 313.125 63.5 301.008 63.5H286.256Z"
+                        fill="white"/>
+                    <path
+                        d="M371.751 124.39H404.592V75.5041H414.777H415.656L447.969 124.39H485.2L449.374 69.937C463.95 64.3699 473.609 53.7575 473.609 39.3178C473.609 16.3534 453.94 2.60959 421.626 2.60959H371.751V124.39ZM404.592 60.8904V18.6151H421.451C434.271 18.6151 441.822 26.4438 441.822 39.6658C441.822 52.8877 434.271 60.8904 421.451 60.8904H404.592Z"
+                        fill="white"/>
+                    <path
+                        d="M557.449 127C594.855 127 621.724 100.208 621.724 63.5C621.724 26.6178 594.855 0 557.449 0C520.042 0 492.997 26.6178 492.997 63.5C492.997 100.208 520.042 127 557.449 127ZM557.449 109.255C538.482 109.255 526.716 92.9014 526.716 63.5C526.716 33.9247 538.482 17.5712 557.449 17.5712C576.24 17.5712 588.006 33.9247 588.006 63.5C588.006 92.9014 576.24 109.255 557.449 109.255Z"
+                        fill="white"/>
+                    <path
+                        d="M643.58 124.39H676.421V78.1137H691.524C724.716 78.1137 743.507 63.8479 743.507 40.3616C743.507 16.8753 724.716 2.60959 691.524 2.60959H643.58V124.39ZM676.421 63.5V18.4411H691.173C703.29 18.4411 710.491 26.7918 710.491 41.0575C710.491 55.3233 703.29 63.5 691.173 63.5H676.421Z"
+                        fill="white"/>
+                    <path
+                        d="M761.916 124.39H850.954V108.385H794.581V70.8069H828.124V56.0192H794.581V18.4411H844.983V2.60959H761.916V124.39Z"
+                        fill="white"/>
+                    <path d="M872.191 124.39H960V106.819H905.207V2.60959H872.191V124.39Z" fill="white"/>
+                </g>
+                <g style="mix-blend-mode:overlay">
+                    <path
+                        d="M56.0219 127C85.3499 127 109.234 114.648 109.234 89.4219C109.234 63.5 85.3499 55.8452 61.8172 49.0603C45.1336 44.189 32.4892 40.5356 32.4892 29.5753C32.4892 19.4849 44.0799 15.4836 54.9682 15.4836C72.5299 15.4836 84.9987 25.226 87.9842 42.4493H106.775C103.965 13.7438 80.7839 0 53.3876 0C28.9768 0 3.16111 10.6123 3.16111 36.7082C3.16111 62.4562 28.0987 70.111 49.1728 76.548C67.437 81.7671 78.5009 85.5945 78.5009 96.7288C78.5009 106.993 67.9638 111.864 54.2657 111.864C35.8259 111.864 21.0741 101.6 18.2642 83.5069H0C2.80987 112.212 26.1669 127 56.0219 127Z"
+                        fill="white"/>
+                    <path
+                        d="M114.011 124.39H132.978L144.393 92.9014H191.458L202.873 124.39H237.997L192.512 2.60959H159.672L114.011 124.39ZM149.135 78.2877L167.399 28.0096H168.452L186.717 78.2877H149.135Z"
+                        fill="white"/>
+                    <path
+                        d="M253.415 124.39H286.256V78.1137H301.359C334.551 78.1137 353.342 63.8479 353.342 40.3616C353.342 16.8753 334.551 2.60959 301.359 2.60959H253.415V124.39ZM286.256 63.5V18.4411H301.008C313.125 18.4411 320.326 26.7918 320.326 41.0575C320.326 55.3233 313.125 63.5 301.008 63.5H286.256Z"
+                        fill="white"/>
+                    <path
+                        d="M371.751 124.39H404.592V75.5041H414.777H415.656L447.969 124.39H485.2L449.374 69.937C463.95 64.3699 473.609 53.7575 473.609 39.3178C473.609 16.3534 453.94 2.60959 421.626 2.60959H371.751V124.39ZM404.592 60.8904V18.6151H421.451C434.271 18.6151 441.822 26.4438 441.822 39.6658C441.822 52.8877 434.271 60.8904 421.451 60.8904H404.592Z"
+                        fill="white"/>
+                    <path
+                        d="M557.449 127C594.855 127 621.724 100.208 621.724 63.5C621.724 26.6178 594.855 0 557.449 0C520.042 0 492.997 26.6178 492.997 63.5C492.997 100.208 520.042 127 557.449 127ZM557.449 109.255C538.482 109.255 526.716 92.9014 526.716 63.5C526.716 33.9247 538.482 17.5712 557.449 17.5712C576.24 17.5712 588.006 33.9247 588.006 63.5C588.006 92.9014 576.24 109.255 557.449 109.255Z"
+                        fill="white"/>
+                    <path
+                        d="M643.58 124.39H676.421V78.1137H691.524C724.716 78.1137 743.507 63.8479 743.507 40.3616C743.507 16.8753 724.716 2.60959 691.524 2.60959H643.58V124.39ZM676.421 63.5V18.4411H691.173C703.29 18.4411 710.491 26.7918 710.491 41.0575C710.491 55.3233 703.29 63.5 691.173 63.5H676.421Z"
+                        fill="white"/>
+                    <path
+                        d="M761.916 124.39H850.954V108.385H794.581V70.8069H828.124V56.0192H794.581V18.4411H844.983V2.60959H761.916V124.39Z"
+                        fill="white"/>
+                    <path d="M872.191 124.39H960V106.819H905.207V2.60959H872.191V124.39Z" fill="white"/>
+                </g>
                 <path
                     d="M56.0219 127C85.3499 127 109.234 114.648 109.234 89.4219C109.234 63.5 85.3499 55.8452 61.8172 49.0603C45.1336 44.189 32.4892 40.5356 32.4892 29.5753C32.4892 19.4849 44.0799 15.4836 54.9682 15.4836C72.5299 15.4836 84.9987 25.226 87.9842 42.4493H106.775C103.965 13.7438 80.7839 0 53.3876 0C28.9768 0 3.16111 10.6123 3.16111 36.7082C3.16111 62.4562 28.0987 70.111 49.1728 76.548C67.437 81.7671 78.5009 85.5945 78.5009 96.7288C78.5009 106.993 67.9638 111.864 54.2657 111.864C35.8259 111.864 21.0741 101.6 18.2642 83.5069H0C2.80987 112.212 26.1669 127 56.0219 127Z"
-                    fill="white"/>
+                    fill="white" fill-opacity="0.2"/>
                 <path
                     d="M114.011 124.39H132.978L144.393 92.9014H191.458L202.873 124.39H237.997L192.512 2.60959H159.672L114.011 124.39ZM149.135 78.2877L167.399 28.0096H168.452L186.717 78.2877H149.135Z"
-                    fill="white"/>
+                    fill="white" fill-opacity="0.2"/>
                 <path
                     d="M253.415 124.39H286.256V78.1137H301.359C334.551 78.1137 353.342 63.8479 353.342 40.3616C353.342 16.8753 334.551 2.60959 301.359 2.60959H253.415V124.39ZM286.256 63.5V18.4411H301.008C313.125 18.4411 320.326 26.7918 320.326 41.0575C320.326 55.3233 313.125 63.5 301.008 63.5H286.256Z"
-                    fill="white"/>
+                    fill="white" fill-opacity="0.2"/>
                 <path
                     d="M371.751 124.39H404.592V75.5041H414.777H415.656L447.969 124.39H485.2L449.374 69.937C463.95 64.3699 473.609 53.7575 473.609 39.3178C473.609 16.3534 453.94 2.60959 421.626 2.60959H371.751V124.39ZM404.592 60.8904V18.6151H421.451C434.271 18.6151 441.822 26.4438 441.822 39.6658C441.822 52.8877 434.271 60.8904 421.451 60.8904H404.592Z"
-                    fill="white"/>
+                    fill="white" fill-opacity="0.2"/>
                 <path
                     d="M557.449 127C594.855 127 621.724 100.208 621.724 63.5C621.724 26.6178 594.855 0 557.449 0C520.042 0 492.997 26.6178 492.997 63.5C492.997 100.208 520.042 127 557.449 127ZM557.449 109.255C538.482 109.255 526.716 92.9014 526.716 63.5C526.716 33.9247 538.482 17.5712 557.449 17.5712C576.24 17.5712 588.006 33.9247 588.006 63.5C588.006 92.9014 576.24 109.255 557.449 109.255Z"
-                    fill="white"/>
+                    fill="white" fill-opacity="0.2"/>
                 <path
                     d="M643.58 124.39H676.421V78.1137H691.524C724.716 78.1137 743.507 63.8479 743.507 40.3616C743.507 16.8753 724.716 2.60959 691.524 2.60959H643.58V124.39ZM676.421 63.5V18.4411H691.173C703.29 18.4411 710.491 26.7918 710.491 41.0575C710.491 55.3233 703.29 63.5 691.173 63.5H676.421Z"
-                    fill="white"/>
+                    fill="white" fill-opacity="0.2"/>
                 <path
                     d="M761.916 124.39H850.954V108.385H794.581V70.8069H828.124V56.0192H794.581V18.4411H844.983V2.60959H761.916V124.39Z"
-                    fill="white"/>
-                <path d="M872.191 124.39H960V106.819H905.207V2.60959H872.191V124.39Z" fill="white"/>
-            </g>
-            <g style="mix-blend-mode:overlay">
-                <path
-                    d="M56.0219 127C85.3499 127 109.234 114.648 109.234 89.4219C109.234 63.5 85.3499 55.8452 61.8172 49.0603C45.1336 44.189 32.4892 40.5356 32.4892 29.5753C32.4892 19.4849 44.0799 15.4836 54.9682 15.4836C72.5299 15.4836 84.9987 25.226 87.9842 42.4493H106.775C103.965 13.7438 80.7839 0 53.3876 0C28.9768 0 3.16111 10.6123 3.16111 36.7082C3.16111 62.4562 28.0987 70.111 49.1728 76.548C67.437 81.7671 78.5009 85.5945 78.5009 96.7288C78.5009 106.993 67.9638 111.864 54.2657 111.864C35.8259 111.864 21.0741 101.6 18.2642 83.5069H0C2.80987 112.212 26.1669 127 56.0219 127Z"
-                    fill="white"/>
-                <path
-                    d="M114.011 124.39H132.978L144.393 92.9014H191.458L202.873 124.39H237.997L192.512 2.60959H159.672L114.011 124.39ZM149.135 78.2877L167.399 28.0096H168.452L186.717 78.2877H149.135Z"
-                    fill="white"/>
-                <path
-                    d="M253.415 124.39H286.256V78.1137H301.359C334.551 78.1137 353.342 63.8479 353.342 40.3616C353.342 16.8753 334.551 2.60959 301.359 2.60959H253.415V124.39ZM286.256 63.5V18.4411H301.008C313.125 18.4411 320.326 26.7918 320.326 41.0575C320.326 55.3233 313.125 63.5 301.008 63.5H286.256Z"
-                    fill="white"/>
-                <path
-                    d="M371.751 124.39H404.592V75.5041H414.777H415.656L447.969 124.39H485.2L449.374 69.937C463.95 64.3699 473.609 53.7575 473.609 39.3178C473.609 16.3534 453.94 2.60959 421.626 2.60959H371.751V124.39ZM404.592 60.8904V18.6151H421.451C434.271 18.6151 441.822 26.4438 441.822 39.6658C441.822 52.8877 434.271 60.8904 421.451 60.8904H404.592Z"
-                    fill="white"/>
-                <path
-                    d="M557.449 127C594.855 127 621.724 100.208 621.724 63.5C621.724 26.6178 594.855 0 557.449 0C520.042 0 492.997 26.6178 492.997 63.5C492.997 100.208 520.042 127 557.449 127ZM557.449 109.255C538.482 109.255 526.716 92.9014 526.716 63.5C526.716 33.9247 538.482 17.5712 557.449 17.5712C576.24 17.5712 588.006 33.9247 588.006 63.5C588.006 92.9014 576.24 109.255 557.449 109.255Z"
-                    fill="white"/>
-                <path
-                    d="M643.58 124.39H676.421V78.1137H691.524C724.716 78.1137 743.507 63.8479 743.507 40.3616C743.507 16.8753 724.716 2.60959 691.524 2.60959H643.58V124.39ZM676.421 63.5V18.4411H691.173C703.29 18.4411 710.491 26.7918 710.491 41.0575C710.491 55.3233 703.29 63.5 691.173 63.5H676.421Z"
-                    fill="white"/>
-                <path
-                    d="M761.916 124.39H850.954V108.385H794.581V70.8069H828.124V56.0192H794.581V18.4411H844.983V2.60959H761.916V124.39Z"
-                    fill="white"/>
-                <path d="M872.191 124.39H960V106.819H905.207V2.60959H872.191V124.39Z" fill="white"/>
-            </g>
-            <path
-                d="M56.0219 127C85.3499 127 109.234 114.648 109.234 89.4219C109.234 63.5 85.3499 55.8452 61.8172 49.0603C45.1336 44.189 32.4892 40.5356 32.4892 29.5753C32.4892 19.4849 44.0799 15.4836 54.9682 15.4836C72.5299 15.4836 84.9987 25.226 87.9842 42.4493H106.775C103.965 13.7438 80.7839 0 53.3876 0C28.9768 0 3.16111 10.6123 3.16111 36.7082C3.16111 62.4562 28.0987 70.111 49.1728 76.548C67.437 81.7671 78.5009 85.5945 78.5009 96.7288C78.5009 106.993 67.9638 111.864 54.2657 111.864C35.8259 111.864 21.0741 101.6 18.2642 83.5069H0C2.80987 112.212 26.1669 127 56.0219 127Z"
-                fill="white" fill-opacity="0.2"/>
-            <path
-                d="M114.011 124.39H132.978L144.393 92.9014H191.458L202.873 124.39H237.997L192.512 2.60959H159.672L114.011 124.39ZM149.135 78.2877L167.399 28.0096H168.452L186.717 78.2877H149.135Z"
-                fill="white" fill-opacity="0.2"/>
-            <path
-                d="M253.415 124.39H286.256V78.1137H301.359C334.551 78.1137 353.342 63.8479 353.342 40.3616C353.342 16.8753 334.551 2.60959 301.359 2.60959H253.415V124.39ZM286.256 63.5V18.4411H301.008C313.125 18.4411 320.326 26.7918 320.326 41.0575C320.326 55.3233 313.125 63.5 301.008 63.5H286.256Z"
-                fill="white" fill-opacity="0.2"/>
-            <path
-                d="M371.751 124.39H404.592V75.5041H414.777H415.656L447.969 124.39H485.2L449.374 69.937C463.95 64.3699 473.609 53.7575 473.609 39.3178C473.609 16.3534 453.94 2.60959 421.626 2.60959H371.751V124.39ZM404.592 60.8904V18.6151H421.451C434.271 18.6151 441.822 26.4438 441.822 39.6658C441.822 52.8877 434.271 60.8904 421.451 60.8904H404.592Z"
-                fill="white" fill-opacity="0.2"/>
-            <path
-                d="M557.449 127C594.855 127 621.724 100.208 621.724 63.5C621.724 26.6178 594.855 0 557.449 0C520.042 0 492.997 26.6178 492.997 63.5C492.997 100.208 520.042 127 557.449 127ZM557.449 109.255C538.482 109.255 526.716 92.9014 526.716 63.5C526.716 33.9247 538.482 17.5712 557.449 17.5712C576.24 17.5712 588.006 33.9247 588.006 63.5C588.006 92.9014 576.24 109.255 557.449 109.255Z"
-                fill="white" fill-opacity="0.2"/>
-            <path
-                d="M643.58 124.39H676.421V78.1137H691.524C724.716 78.1137 743.507 63.8479 743.507 40.3616C743.507 16.8753 724.716 2.60959 691.524 2.60959H643.58V124.39ZM676.421 63.5V18.4411H691.173C703.29 18.4411 710.491 26.7918 710.491 41.0575C710.491 55.3233 703.29 63.5 691.173 63.5H676.421Z"
-                fill="white" fill-opacity="0.2"/>
-            <path
-                d="M761.916 124.39H850.954V108.385H794.581V70.8069H828.124V56.0192H794.581V18.4411H844.983V2.60959H761.916V124.39Z"
-                fill="white" fill-opacity="0.2"/>
-            <path d="M872.191 124.39H960V106.819H905.207V2.60959H872.191V124.39Z" fill="white" fill-opacity="0.2"/>
-        </svg>
-        <span>Sapropel is the soil for the future.</span>
+                    fill="white" fill-opacity="0.2"/>
+                <path d="M872.191 124.39H960V106.819H905.207V2.60959H872.191V124.39Z" fill="white" fill-opacity="0.2"/>
+            </svg>
+            <span>Sapropel is the soil for the future.</span>
+        </div>
+        <div class="main-bg">
+            <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/main-bg.webp" class="lazy-web"
+                        type="image/webp">
+                <source srcset="../../images/pixel.png" data-original="../../images/main-bg.png" class="lazy-web"
+                        type="image/png">
+                <img src="../../images/pixel.png" data-original="../../images/main-bg.png" class="lazy" alt="">
+            </picture>
+        </div>
     </div>
-    <div class="main-bg">
-        <picture>
-            <source srcset="../../images/pixel.webp" data-original="../../images/main-bg.webp" class="lazy-web"
-                    type="image/webp">
-            <source srcset="../../images/pixel.png" data-original="../../images/main-bg.png" class="lazy-web"
-                    type="image/png">
-            <img src="../../images/pixel.png" data-original="../../images/main-bg.png" class="lazy" alt="">
-        </picture>
-    </div>
-
 </div>
-<div class="section product-section">
+<div class="section product-section" id="about" data-id="about">
     <picture>
         <source srcset="../../images/pixel.webp" data-original="../../images/products-bg.webp" class="lazy-web"
                 type="image/webp">
@@ -113,49 +114,53 @@ ${require('../parts/header.html')}
                 type="image/png">
         <img src="../../images/pixel.png" data-original="../../images/products-bg.png" class="lazy" alt="">
     </picture>
-    <div class="container">
-        <div class="product-title">
+    <div class="contaner">
+        <div class="product-title animate fadeInDown">
             <small>For the Agricultural Sector</small>
-            <span>Organic and bio additive to enhance your product</span>
+            <span>Nature's gift with<br> a scientific approach</span>
         </div>
-        <div class="product-text">
+        <div class="product-text animate fadeInDown">
             <div class="product-text__inner">
+                <p>One of the most powerful biological container on Earth.</p>
                 <p>Sapropel – centuries-old bottom sediments of freshwater lakes, which were formed from dead aquatic
                     vegetation, remnants of living organisms, plankton, and soil humus particles containing a large
-                    amount of organic matter, humus.</p>
-                <p>Nature's gift with a scientific approach.</p>
+                    amount of organic matter, unique in the content of humic acids.</p>
+                <p>Sapropel stores a uniquely balanced set of all necessary elements for all types of life.</p>
             </div>
         </div>
         <div class="product-cycles">
             <div class="product-cycles-list">
-                <div class="product-cycles__item">
+                <div class="product-cycles__item cycles-1">
                     <div>
-                        <span>Long-term preservation in the soil, protection and strengthening of the root system</span>
+                        <span><b>Crop</b> - as a universal fertilizer and soil improver. Ready-to-use for farming,
+                            landscaping, urban greening, gardening. Long-term preservation in the soil, protection and strengthening of the root system;</span>
                     </div>
                     <i></i>
                 </div>
-                <div class="product-cycles__item">
-                    <div>
-                        <span>Increase your harvest by 80%</span>
-                    </div>
-                    <i></i>
-                </div>
-                <div class="product-cycles__item">
+                <div class="product-cycles__item cycles-2">
                     <div>
                         <span>100% organic and human friendly</span>
                     </div>
                     <i></i>
                 </div>
-                <div class="product-cycles__item">
+                <div class="product-cycles__item cycles-3">
                     <div>
-                        <span>Outstanding results in sandy soils whit 50% water saving</span>
+                        <span><b>Cosmetology and pharmacology</b> - Natural origin ensures that humates are completely safe
+                            for humans. They are actively used in various medical fields:pathology therapy,elimination of inflammation caused by bacteria, with problems with metabolism, and toxic poisoning. Due to its rich composition, it is widely used in cosmetology;</span>
+                    </div>
+                    <i></i>
+                </div>
+                <div class="product-cycles__item cycles-4">
+                    <div>
+                        <span><b>Livestock and poultry</b> - as a feed additive; manufacturing of various feed products- as
+                            a main component (for feed concentrates, combined fodders) and filler (for premix production);</span>
                     </div>
 
                     <i></i>
                 </div>
-                <div class="product-cycles__item">
+                <div class="product-cycles__item cycles-5">
                     <div>
-                        <span>Organic soil improver & fertilizer. Ready-to-use for farming, landscaping, urban greening, gardening</span>
+                        <span>Soils: manufacturing of sorbents for purification of water and soil from oil, heavy metals, radionuclides - as a main component. supervisory body of the amount of water in soils: with an excess of water, it prevents the leaching of the necessary nutrients from it, with a lack of water it is able to provide the necessary nutrients;</span>
                     </div>
                     <i></i>
                 </div>
@@ -164,19 +169,19 @@ ${require('../parts/header.html')}
         <div class="product-rectangles">
             <div class="product-rectangles__list">
                 <div class="product-rectangles__item">
-                    <span>Long-term preservation in the soil, protection and strengthening of the root system</span>
-                </div>
-                <div class="product-rectangles__item">
-                    <span>Organic soil improver & fertilizer. Ready-to-use for farming, landscaping, urban greening, gardening</span>
-                </div>
-                <div class="product-rectangles__item">
-                    <span>Increase your harvest by 80%</span>
-                </div>
-                <div class="product-rectangles__item">
-                    <span>Outstanding results in sandy soils whit 50% water saving</span>
-                </div>
-                <div class="product-rectangles__item">
                     <span>100% organic and human friendly</span>
+                </div>
+                <div class="product-rectangles__item">
+                    <span>Crop - as a universal fertilizer and soil improver. Ready-to-use for farming, landscaping, urban greening, gardening. Long-term preservation in the soil, protection and strengthening of the root system;</span>
+                </div>
+                <div class="product-rectangles__item">
+                    <span>Livestock and poultry - as a feed additive; manufacturing of various feed products- as a main component (for feed concentrates, combined fodders) and filler (for premix production);/span>
+                </div>
+                <div class="product-rectangles__item">
+                    <span>Soils: manufacturing of sorbents for purification of water and soil from oil, heavy metals, radionuclides - as a main component. supervisory body of the amount of water in soils: with an excess of water, it prevents the leaching of the necessary nutrients from it, with a lack of water it is able to provide the necessary nutrients;</span>
+                </div>
+                <div class="product-rectangles__item">
+                    <span>Cosmetology and pharmacology - Natural origin ensures that humates are completely safe for humans. They are actively used in various medical fields:pathology therapy,elimination of inflammation caused by bacteria, with problems with metabolism, and toxic poisoning. Due to its rich composition, it is widely used in cosmetology.</span>
                 </div>
             </div>
         </div>
@@ -249,10 +254,10 @@ ${require('../parts/header.html')}
 
     </div>
 </div>
-<div class="section advantages-section">
+<div class="section advantages-section" id="advantages" data-id="advantages">
     <div class="advantages-section__wrapper">
         <div class="container">
-            <span class="advantages-title">Our competitive advantages</span>
+            <span class="advantages-title animate fadeInDown">Our competitive advantages</span>
             <div class="advantages-wrapper">
                 <div class="advantages-left">
                     <div class="advantages-logo">
@@ -314,7 +319,7 @@ ${require('../parts/header.html')}
                     </div>
                 </div>
                 <div class="advantages-right">
-                    <div class="advantages-leaf">
+                    <div class="advantages-leaf animate rotate">
                         <picture>
                             <source srcset="../../images/pixel.webp" data-original="../../images/leaf.webp"
                                     class="lazy-web"
@@ -326,8 +331,8 @@ ${require('../parts/header.html')}
                         </picture>
                     </div>
                     <div class="advantages-list">
-                        <div class="advantages-list__item">
-                            <div class="advantages-list__head">
+                        <div class="advantages-list__item animate fadeInDown">
+                            <div class="advantages-list__head ">
                                 <span>Agronomic support at all stages</span>
                                 <i>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -345,14 +350,15 @@ ${require('../parts/header.html')}
                                 </i>
                             </div>
                             <div class="advantages-list__body">
+                                <p>12 years of experience of our team allows us to :</p>
                                 <p>Providing to our clients scientifically based guidelines for the use of organic and
                                     organic-mineral fertilizers.</p>
                                 <p>Assistance in agrochemical inspection of soils, creation and adaptation of plant
-                                    nutrition system for our clients.</p>
+                                    nutrition systems for our clients.</p>
                                 <p>Constant consulting and support of our clients.</p>
                             </div>
                         </div>
-                        <div class="advantages-list__item">
+                        <div class="advantages-list__item animate fadeInDown">
                             <div class="advantages-list__head">
                                 <span>ISO certified production</span>
                                 <i>
@@ -371,11 +377,10 @@ ${require('../parts/header.html')}
                             </div>
                             <div class="advantages-list__body">
                                 <p>Quality control system on every stage from mining of raw material to packaging of
-                                    final
-                                    product.</p>
+                                    final product.</p>
                             </div>
                         </div>
-                        <div class="advantages-list__item">
+                        <div class="advantages-list__item animate fadeInDown">
                             <div class="advantages-list__head">
                                 <span>2,5 million ton of our own deposits</span>
                                 <i>
@@ -396,7 +401,7 @@ ${require('../parts/header.html')}
                                 <p>We guarantee enough stock for every client.</p>
                             </div>
                         </div>
-                        <div class="advantages-list__item">
+                        <div class="advantages-list__item animate fadeInDown">
                             <div class="advantages-list__head">
                                 <span>We have full set of documents</span>
                                 <i>
@@ -414,9 +419,8 @@ ${require('../parts/header.html')}
                                 </i>
                             </div>
                             <div class="advantages-list__body">
-                                <p>WMining certificate, state certificate,ISO 9001, ISO 14001, German Organic
-                                    Certification,
-                                    certificate from Organic Standard, etc.</p>
+                                <p>Mining certificate, state certificate,ISO 9001, ISO 14001, German Organic
+                                    Certification, certificate from Organic Standard, etc.</p>
                             </div>
                         </div>
                     </div>
@@ -427,44 +431,121 @@ ${require('../parts/header.html')}
     <div class="advantages-line">
         <svg width="1920" height="249" viewBox="0 0 1920 249" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_317_1048)">
-                <circle cx="499" cy="55" r="141" stroke="#00A693" stroke-width="8"/>
-                <circle cx="497.876" cy="55.0001" r="114.023" stroke="#00A693" stroke-width="8"/>
-                <circle cx="256" cy="230" r="141" stroke="#00A693" stroke-width="8"/>
-                <circle cx="254.876" cy="230" r="114.023" stroke="#00A693" stroke-width="8"/>
-                <circle cx="115.5" cy="181.5" r="95.5" stroke="#00A693" stroke-width="8"/>
-                <circle cx="114.729" cy="181.5" r="76.9884" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="40.5" cy="1.5" r="95.5" stroke="#00A693" stroke-width="8"/>
-                <circle cx="39.7287" cy="1.50009" r="76.9884" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="639.5" cy="8.5" r="95.5" stroke="#00A693" stroke-width="8"/>
-                <circle cx="638.729" cy="8.50009" r="76.9884" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="717.5" cy="181.5" r="95.5" stroke="#00A693" stroke-width="8"/>
-                <circle cx="716.729" cy="181.5" r="76.9884" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="1240.5" cy="7.5" r="95.5" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1239.73" cy="7.50009" r="76.9884" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1812.5" cy="7.5" r="95.5" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1811.73" cy="7.50009" r="76.9884" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1320.5" cy="181.5" r="95.5" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1319.73" cy="181.5" r="76.9884" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="1892.5" cy="181.5" r="95.5" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1891.73" cy="181.5" r="76.9884" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="1438" cy="214" r="125" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1437" cy="214" r="101" stroke="#00A693" stroke-width="8"/>
-                <circle cx="2010" cy="214" r="125" stroke="#00A693" stroke-width="8"/>
-                <circle cx="2009" cy="214" r="101" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1094" cy="60" r="141" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1666" cy="60" r="141" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1092.88" cy="59.9998" r="114.023" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1664.88" cy="59.9998" r="114.023" stroke="#00A693" stroke-width="8"/>
-                <circle cx="1093" cy="60" r="91" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="1665" cy="60" r="91" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="861" cy="230" r="91" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="496" cy="55" r="91" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="256" cy="230" r="91" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="1438" cy="214" r="75" stroke="#0093AF" stroke-width="8"/>
-                <circle cx="858" cy="230" r="141" stroke="#00A693" stroke-width="8"/>
-                <circle cx="856.876" cy="230" r="114.023" stroke="#00A693" stroke-width="8"/>
-                <circle cx="-88" cy="60" r="125" stroke="#00A693" stroke-width="8"/>
-                <circle cx="-89" cy="60" r="101" stroke="#0093AF" stroke-width="8"/>
+                <g class="animate fadeInDown">
+                    <circle cx="499" cy="55" r="141" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="497.876" cy="55.0001" r="114.023" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="256" cy="230" r="141" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="254.876" cy="230" r="114.023" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="115.5" cy="181.5" r="95.5" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="114.729" cy="181.5" r="76.9884" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="40.5" cy="1.5" r="95.5" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="39.7287" cy="1.50009" r="76.9884" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="639.5" cy="8.5" r="95.5" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="638.729" cy="8.50009" r="76.9884" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="717.5" cy="181.5" r="95.5" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="716.729" cy="181.5" r="76.9884" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1240.5" cy="7.5" r="95.5" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1239.73" cy="7.50009" r="76.9884" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1812.5" cy="7.5" r="95.5" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1811.73" cy="7.50009" r="76.9884" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1320.5" cy="181.5" r="95.5" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1319.73" cy="181.5" r="76.9884" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle class="animate fadeInDown" cx="1892.5" cy="181.5" r="95.5" stroke="#00A693"
+                            stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1891.73" cy="181.5" r="76.9884" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1438" cy="214" r="125" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1437" cy="214" r="101" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="2010" cy="214" r="125" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="2009" cy="214" r="101" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1094" cy="60" r="141" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1666" cy="60" r="141" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1092.88" cy="59.9998" r="114.023" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1664.88" cy="59.9998" r="114.023" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1093" cy="60" r="91" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1665" cy="60" r="91" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="861" cy="230" r="91" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="496" cy="55" r="91" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="256" cy="230" r="91" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="1438" cy="214" r="75" stroke="#0093AF" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="858" cy="230" r="141" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="856.876" cy="230" r="114.023" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="-88" cy="60" r="125" stroke="#00A693" stroke-width="8"/>
+                </g>
+                <g class="animate fadeInDown">
+                    <circle cx="-89" cy="60" r="101" stroke="#0093AF" stroke-width="8"/>
+                </g>
             </g>
             <defs>
                 <clipPath id="clip0_317_1048">
@@ -532,7 +613,7 @@ ${require('../parts/header.html')}
         </div>
     </div>
 </div>
-<div class="section contacts-section">
+<div class="section contacts-section" id="contacts" data-id="contacts">
     <div class="container">
         <div class="contacts-wrapper">
             <div class="contacts-pic">
@@ -545,16 +626,16 @@ ${require('../parts/header.html')}
                 </picture>
             </div>
             <div class="contacts-inner">
-                <div class="contacts-title">
+                <div class="contacts-title animate fadeInUp">
                     <div>
                         <small>Let’s get down to communication & business</small>
                         <span>Grow up whit our team</span>
                     </div>
                 </div>
 
-                <div class="contacts-link-mob">
-                    <a href="javascript:void(0)">Send a request</a>
-                    <a href="javascript:void(0)">See our presentation</a>
+                <div class="contacts-link-mob  animate fadeInUp">
+                    <a href="javascript:void(0)" class="popup-btn" data-mfp-src="#get-popup">Send a request</a>
+                    <a href="javascript:void(0)" target="_blank">See our presentation</a>
                 </div>
 
                 <div class="contacts-pic-mob">
@@ -569,17 +650,17 @@ ${require('../parts/header.html')}
                              alt="">
                     </picture>
                 </div>
-                <div class="contacts-details">
+                <div class="contacts-details  animate fadeInUp">
                     <div class="contacts-details__wrapper">
                         <div class="contacts-link">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" class="popup-btn" data-mfp-src="#get-popup">
                                 <i></i>
                                 <span>Send a request</span>
                             </a>
                         </div>
-                        <spsn class="contacts-address">Bezoekadres DeltaHouse B.V. Koematen 8
+                        <span class="contacts-address">Bezoekadres DeltaHouse B.V. Koematen 8
                             8331 TK Steenwijk
-                        </spsn>
+                        </span>
                         <div class="contacts-social">
                             <a href="javascript:void(0)">
                                 <svg width="32" height="32" viewBox="0 0 40 40" fill="none"
@@ -698,7 +779,7 @@ ${require('../parts/header.html')}
                     </div>
                     <div class="contacts-details__wrapper">
                         <div class="contacts-link">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" target="_blank">
                                 <i></i>
                                 <span>See our presentation</span>
                             </a>
@@ -717,18 +798,18 @@ ${require('../parts/header.html')}
 
                 </div>
                 <div class="contacts-details-mob">
-                    <spsn class="contacts-address-mob">Bezoekadres DeltaHouse B.V. Koematen 8
+                    <span class="contacts-address-mob animate fadeInUp">Bezoekadres DeltaHouse B.V. Koematen 8
                         8331 TK Steenwijk
-                    </spsn>
-                    <div class="contacts-more__connect-mob">
+                    </span>
+                    <div class="contacts-more__connect-mob animate fadeInUp">
                         <a href="javascript:void(0)"><span>+31 (0) 521 - 70 02 13</span></a>
                         <a href="javascript:void(0)"><span>info@sapropel.nl</span></a>
                     </div>
-                    <div class="contacts-more__docs-mob">
+                    <div class="contacts-more__docs-mob animate fadeInUp">
                         <a href="javascript:void(0)"><span>Terms and Conditions</span></a>
                         <a href="javascript:void(0)"><span>Privacy policy</span></a>
                     </div>
-                    <div class="contacts-social-mob">
+                    <div class="contacts-social-mob animate fadeInUp">
                         <a href="javascript:void(0)">
                             <svg width="32" height="32" viewBox="0 0 40 40" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">

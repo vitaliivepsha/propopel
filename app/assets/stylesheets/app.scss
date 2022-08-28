@@ -18,17 +18,26 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  //@include bp(md) {
-  //  display: block;
-  //}
+  @include bp(md) {
+    display: block;
+  }
 
-  &.menu-opened {
-    @include bp(md) {
-      overflow: hidden;
+  &.swal2-shown {
+    & .mfp-bg {
+      //display: none !important;
+      z-index: 0;
     }
 
-    .header {
-      background-color: transparent;
+    & .mfp-wrap {
+      display: none !important;
+    }
+  }
+
+  &.menu-opened {
+
+
+    @include bp(md) {
+      overflow: hidden;
     }
 
     & .mobile-menu__wrapper {
@@ -38,7 +47,21 @@ body {
       visibility: visible;
     }
 
+
+    & .header-logo {
+      position: relative;
+
+      & .logo {
+        opacity: 1 !important;
+      }
+
+      & .logo-white {
+        opacity: 0 !important;
+      }
+    }
   }
+
+
 }
 
 ol,
@@ -164,6 +187,15 @@ textarea:-webkit-autofill:hover {
     transition: all ease-in-out 0.2s;
     font-size: 20px;
     line-height: 24px;
+    @include bp(xs) {
+      font-size: 18px;
+    }
+    @media (max-width: 420px) {
+      padding-bottom: 10px;
+    }
+    @include bp(xxs) {
+      font-size: 16px;
+    }
 
     &:focus {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -182,6 +214,12 @@ textarea:-webkit-autofill:hover {
     overflow-y: auto;
     margin-bottom: -1px;
     transition: all ease-in-out 0.2s;
+    @include bp(xs) {
+      font-size: 18px;
+    }
+    @include bp(xxs) {
+      font-size: 16px;
+    }
 
     &:focus {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -213,6 +251,12 @@ textarea:-webkit-autofill:hover {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+    @include bp(xs) {
+      font-size: 18px;
+    }
+    @include bp(xxs) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -228,6 +272,12 @@ textarea:-webkit-autofill:hover {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  @include bp(xs) {
+    font-size: 14px;
+  }
+  @include bp(xxs) {
+    font-size: 12px;
+  }
 }
 
 button.btn {
@@ -288,3 +338,6 @@ button.btn {
 @import "main/section-4";
 // Footer
 @import "footer";
+
+// Animate
+@import "animation";

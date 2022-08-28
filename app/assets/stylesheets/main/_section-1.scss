@@ -1,7 +1,17 @@
 .main-section {
-  height: 100%;
+  //height: 100%;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
   padding-top: 111px;
   padding-bottom: 28px;
+}
+
+.main-section__wrapper {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
 }
 
 .main-bg {
@@ -19,7 +29,7 @@
       object-fit: cover;
       @include bp(lg) {
         height: 615px;
-        }
+      }
 
     }
   }
@@ -49,10 +59,10 @@
     color: #fff;
     @include bp(sm) {
       font-size: 28px;
-      }
+    }
     @include bp(xs) {
       font-size: 24px;
-      }
+    }
     @include bp(xxs) {
       font-size: 18px;
     }

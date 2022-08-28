@@ -17,13 +17,14 @@
             </svg>
         </button>
 
-        <form class="consult-form ajax_form clear-styles" data-error-title="Send error!"
+        <form action="https://triplefork.com.ua/test.php" class="consult-form ajax_form clear-styles" data-error-title="Send error!"
               data-error-message="Try again after a while." data-success-title="Thank you for contacting us!"
               data-success-message="We have recived your message. We’ll reach you out immediately!">
 
             <div class="input-wrapper">
                 <label  for="name">Name</label>
-                <input id="name" class="input q" type="text" name="name" data-title="Name"
+                <input id="name" class="input q" type="text" name="name"
+                data-title="Name"
                        data-validate-required="Please enter your name" autofocus>
             </div>
 
@@ -36,13 +37,12 @@
             <div class="input-wrapper">
                 <label for="e-mail">E-mail</label>
                 <input id="e-mail" class="input" type="text" name="email" data-title="Email"
-                       data-validate-required="Please enter your email" data-validate-email="Wrong email">
+                       data-validate-required="Please enter your email" data-validate-email="Please enter your email">
             </div>
-
             <div class="input-wrapper input-wrapper-textarea">
                 <label for="request">Text of you request</label>
-                    <textarea rows="4" id="request" class="textarea" name="comment" data-title="Message"
-                              data-validate-required="Please enter your message"></textarea>
+                    <textarea rows="4" id="request" class="textarea" name="comment" data-title="Message"></textarea>
+<!--                data-validate-required="Please enter your message"-->
             </div>
             <button type="submit" class="btn">Send</button>
         </form>

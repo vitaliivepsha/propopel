@@ -31,10 +31,11 @@ $(function () {
     // new Slider();
 
     setTimeout(function () {
-        $('body').trigger('scroll');
+        $('body').trigger('scroll', doAnimations);
         $(window).trigger('resize');
+        $('body').css('opacity', '1');
     }, 100);
-
+    $('body').css('display', 'block');
 
     // fixed header
 
@@ -70,6 +71,26 @@ $(function () {
         });
     }
 
+    // form popup
+
+    $('.btn').click(function() {
+        $('body').removeClass("menu-opened");
+        $('.mobile-menu__btn').removeClass("active");
+    })
+    //
+    // $('form').on('submit', function(event) {
+    //     $('body').addClass("actifegdfgdgdfgdfgve");
+    // })
+
+    // ===
+
+
+    $('.mobile-menu li a').click(function() {
+        $('body').removeClass("menu-opened");
+        $('.mobile-menu__btn').removeClass("active");
+    })
+
+
     $(touch).click(function (e) {
         e.preventDefault();
         $('body').toggleClass('menu-opened');
@@ -82,17 +103,15 @@ $(function () {
         e.stopPropagation();
     });
 
-    //lang
-
-    $('.header-lang__inner span').click(function () {
+    $('.header-lang__current').click(function () {
         $(this).parent().toggleClass('active');
     });
 
     $(document).click(function () {
-        $(".header-lang__inner").removeClass("active");
+        $(".header-lang").removeClass("active");
     });
 
-    $(document).on("click", ".header-lang__inner", function (e) {
+    $(document).on("click", ".header-lang", function (e) {
         e.stopPropagation();
     });
 
@@ -112,12 +131,12 @@ $(function () {
         $(this).toggleClass("active").next(".advantages-list__body").slideToggle();
     });
 
-    $('.header-btn').magnificPopup({
+    $('.header-btn, .popup-btn').magnificPopup({
         callbacks: {
-            open: function() {
+            open: function () {
                 setTimeout(function () {
                     $('.consult-form input[name="name"]').focus();
-                }, 100);
+                }, 400);
             }
         }
     });
@@ -193,7 +212,68 @@ $(function () {
 
     $("#phone").mask("+31 ( 99 ) 999 9999");
 
-    // lazy load
+    // animation
+    var doAnimations = function () {
+        var offset = $(window).scrollTop() + $(window).height(),
+            $animatables = $('.animate');
+        if ($animatables.length == 0) {
+            $(window).off('scroll', doAnimations);
+        }
+        $animatables.each(function (i) {
+            var $animatable = $(this);
+            if (($animatable.offset().top + $animatable.height() + 100) < offset) {
+                $animatable.removeClass('animate').addClass('animated');
+            }
+        });
+    };
+
+    $(window).on('scroll', doAnimations);
+
+    // scroll
+
+    $(document).on("click", 'a[href^="#"]', function (e) {
+        var id = $(this).attr("href");
+        var $id = $(id);
+        if ($id.length === 0) {
+            return;
+        }
+        e.preventDefault();
+        var pos = $id.offset().top + 20;
+        $("body, html").animate({scrollTop: pos}, 500);
+    });
+    $(document).on("click", 'a[href^="#"]', function (e) {
+        e.preventDefault();
+    });
+
+    $(window).scroll(function () {
+        var $sections = $(".section");
+        $sections.each(function (i, el) {
+            var data_id = $(this).data('id');
+            if ($(window).width() >= 768) {
+                var top = $(el).offset().top - 10;
+            } else {
+                var top = $(el).offset().top - 10;
+            }
+            var bottom = top + $(el).height();
+            var scroll = $(window).scrollTop();
+            var id = $(el).attr("id");
+            if (scroll > top && scroll < bottom) {
+                $("a.active").removeClass("active");
+                $('a[href="#' + id + '"]').addClass("active")
+                    .closest('.header').attr('id', data_id);
+            }
+        });
+    });
+
+    $( ".product-cycles__item" ).hover(
+        function() {
+            $( ".product-cycles__item" ).addClass( "stopAnim" ).closest('.product-cycles').addClass( "stopAnim" );
+        }, function() {
+            $( ".product-cycles__item" ).removeClass( "stopAnim" ).closest('.product-cycles').removeClass( "stopAnim" );
+        }
+    );
+
+// lazy load
     var lazyload = function () {
         var scroll = $(window).scrollTop() + $(window).height() * 3;
 
@@ -210,6 +290,10 @@ $(function () {
             }
         });
     };
+
+
     $(window).scroll(lazyload);
-});
+
+})
+
 
