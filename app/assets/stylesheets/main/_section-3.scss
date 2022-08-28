@@ -284,32 +284,28 @@
 }
 
 .advantages-line {
-  display: grid;
-  justify-content: center;
+  max-height: 249px;
   margin: 0 auto;
   margin-bottom: 100px;
   overflow: hidden;
   @media (max-width: 1440px) {
     margin-bottom: 78px;
+    height: 200px;
+  }
+  @include bp(md) {
+    height: 249px;
   }
   @include bp(sm) {
     margin-bottom: 80px;
+    height: 162px;
   }
 
 
   & svg {
+    width: 100%;
     margin: 0 auto;
-    height: 249px;
+    height: auto;
     transition: all ease-in-out 0.3s;
-    @media (max-width: 1440px) {
-      height: 200px;
-    }
-    @include bp(md) {
-      height: 249px;
-    }
-    @include bp(sm) {
-      height: 162px;
-    }
   }
 }
 

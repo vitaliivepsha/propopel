@@ -99,6 +99,7 @@ main {
 .section {
   clear: both;
   position: relative;
+  overflow-x: hidden;
 }
 
 .container,
