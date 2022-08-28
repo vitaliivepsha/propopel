@@ -75,6 +75,10 @@
   z-index: 10037;
 }
 
+.swal2-modal .swal2-icon {
+  opacity: 0 !important;
+}
+
 .swal2-icon.swal2-success.swal2-animate-success-icon {
   opacity: 0 !important;
 }

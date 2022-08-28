@@ -374,7 +374,6 @@ module.exports = function () {
                     button.html(text);
 
                     $('.mfp-close').trigger('click');
-
                     if (typeof response.status !== 'undefined' && response.status == 'success') {
                         form.trigger('sent', response);
                         if (typeof form.data('success-title') !== 'undefined' || typeof form.data('success-message') !== 'undefined') {
@@ -413,6 +412,7 @@ module.exports = function () {
                         var text = 'Error :(';
                     }
                     button.html(text);
+                    $('.mfp-close').trigger('click');
                     form.trigger('error', response);
                     if (typeof form.data('error-title') !== 'undefined' || typeof form.data('error-message') !== 'undefined') {
                         swal({

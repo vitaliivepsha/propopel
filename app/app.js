@@ -77,12 +77,7 @@ $(function () {
         $('body').removeClass("menu-opened");
         $('.mobile-menu__btn').removeClass("active");
     })
-    //
-    // $('form').on('submit', function(event) {
-    //     $('body').addClass("actifegdfgdgdfgdfgve");
-    // })
 
-    // ===
 
 
     $('.mobile-menu li a').click(function() {
