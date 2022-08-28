@@ -373,6 +373,7 @@ module.exports = function () {
                     }
                     button.html(text);
 
+                    $('.mfp-close').trigger('click');
                     if (typeof response.status !== 'undefined' && response.status == 'success') {
                         form.trigger('sent', response);
                         if (typeof form.data('success-title') !== 'undefined' || typeof form.data('success-message') !== 'undefined') {
