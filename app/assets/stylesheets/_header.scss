@@ -12,8 +12,9 @@
   transition: all ease-in-out 0.2s;
   background-color: $bg;
   &#about {
-    background-color: transparent;
-
+    background-color: rgba(#000, 0.6);
+    // 00
+    transition: all ease-in-out 0.2s;
     & .header-menu a {
       color: #fff;
 
@@ -68,7 +69,7 @@
         opacity: 1;
       }
     }
-
+    //00
     & .mobile-menu__btn {
       & svg path {
         fill: #fff;

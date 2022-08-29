@@ -4,7 +4,7 @@
   background-color: $bg;
   @include bp(md) {
     padding-bottom: 0px;
-    }
+  }
 
   @include bp(sm) {
     padding-top: 81px;
@@ -12,7 +12,7 @@
   }
   @media (max-width: 530px) {
     padding-bottom: 80px;
-    }
+  }
 }
 
 .advantages-section__wrapper {
@@ -59,8 +59,8 @@
     padding-bottom: 96px;
   }
   @include bp(sm) {
-  padding-bottom: 43px;
-}
+    padding-bottom: 43px;
+  }
 }
 
 // ======== advantages-left ========
@@ -116,7 +116,8 @@
   @include bp(sm) {
     top: -93px;
     right: -18px;
-    }
+  }
+
   &.animated {
     & picture {
       transition: all ease-in-out 0.2s;
@@ -131,7 +132,7 @@
     height: auto;
     @include bp(sm) {
       max-width: 363px;
-      }
+    }
   }
 }
 
@@ -148,23 +149,29 @@
   }
 }
 
-.advantages-list__item {
-  &:last-child {
-    .advantages-list__head {
-      & span {
-        border-bottom: 1px solid transparent;
-      }
-
-      &.active {
-        & span {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        }
-      }
-    }
-  }
-}
+//.advantages-list__item {
+//  &:last-child {
+//    .advantages-list__head {
+//      & span {
+//        border-bottom: 1px solid transparent;
+//      }
+//
+//      &.active {
+//        & span {
+//          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+//        }
+//      }
+//    }
+//  }
+//}
 
 .advantages-list__item:not(:last-child) {
+  @include bp(sm) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  margin-bottom: 20px;
+
   & .advantages-list__body {
     margin-bottom: 48px;
     @media (max-width: 1440px) {
@@ -212,8 +219,6 @@
     }
     @include bp(sm) {
       padding-right: 46px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       font-size: 20px;
       line-height: 24px;
     }
@@ -222,7 +227,7 @@
   & i {
     position: absolute;
     right: 16px;
-    top: 17px;
+    top: 12px;
     transform: scale(0);
     transition: all ease-in-out 0.2s;
     @include bp(sm) {
@@ -308,7 +313,7 @@
     transition: all ease-in-out 0.3s;
     @media (max-width: 1920px) {
       width: auto;
-      }
+    }
     @media (max-width: 1440px) {
       margin-bottom: 78px;
       height: 200px;
@@ -320,6 +325,104 @@
       margin-bottom: 80px;
       height: 162px;
     }
+  }
+
+  & svg {
+    & .c1 {
+      animation: cycles 3.5s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c2 {
+      animation: cycles 2s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c3 {
+      animation: cycles 2.5s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c4 {
+      animation: cycles 3s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c5 {
+      animation: cycles 2.5s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c6 {
+      animation: cycles 3s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c7 {
+      animation: cycles 3.5s ease-in-out infinite alternate-reverse;
+
+    }
+
+    & .c8 {
+      animation: cycles 2s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c9 {
+      animation: cycles 3s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c10 {
+      animation: cycles 3.5s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c11 {
+      animation: cycles 2s ease-in-out infinite alternate-reverse;
+
+    }
+
+    & .c12 {
+      animation: cycles 2s ease-in-out infinite alternate-reverse;
+
+    }
+
+    & .c13 {
+      animation: cycles 3s ease-in-out infinite alternate-reverse;
+
+    }
+
+    & .c14 {
+      animation: cycles 2s ease-in-out infinite alternate-reverse;
+
+    }
+
+    & .c15 {
+      animation: cycles 2s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c16 {
+      animation: cycles 2s ease-in-out infinite alternate-reverse;
+    }
+
+    & .c17 {
+      animation: cycles 3.6s ease-in-out infinite alternate-reverse;
+    }
+  }
+
+}
+
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+@keyframes circle {
+  0% {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
   }
 }
 

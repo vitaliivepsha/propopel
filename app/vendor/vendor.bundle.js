@@ -12837,6 +12837,7 @@ var vendor_lib =
 	                        var text = 'Error :(';
 	                    }
 	                    button.html(text);
+	                    $('.mfp-close').trigger('click');
 	                    form.trigger('error', response);
 	                    if (typeof form.data('error-title') !== 'undefined' || typeof form.data('error-message') !== 'undefined') {
 	                        swal({

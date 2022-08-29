@@ -155,6 +155,11 @@
 
 .contacts-details__wrapper {
   width: 50%;
+  &:first-child {
+      @media (max-width: 1440px) {
+        width: 50%;
+        }
+  }
   @media (max-width: 1395px) {
     width: unset;
   }
@@ -369,6 +374,7 @@
 
 .contacts-more__connect {
   display: flex;
+  gap: 25px;
   margin-bottom: 52px;
   @media (max-width: 1440px) {
     margin-bottom: 39px;
@@ -400,6 +406,9 @@
 
 .contacts-more__docs {
   display: flex;
+    gap: 25px;
+
+
   @include bp(md) {
     display: none;
   }

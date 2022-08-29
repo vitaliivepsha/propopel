@@ -1,9 +1,12 @@
 .product-section {
   position: relative;
+  z-index: 10;
   padding-top: 178px;
   padding-bottom: 104px;
   padding-left: 65px;
   padding-right: 65px;
+  overflow: hidden;
+
   @include bp(md) {
     padding-left: 20px;
     padding-right: 20px;
@@ -11,12 +14,11 @@
     overflow: hidden;
   }
   @include bp(xs) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 151px;
     padding-bottom: 82px;
   }
-
   & picture {
     position: absolute;
     top: 0;
@@ -25,30 +27,37 @@
     //max-width: 1920px;
     z-index: -1;
     width: 100%;
-    height: 100%;
+    height: 116%;
+    @media (max-width: 1440px) {
+      height: 100%;
+    }
 
 
     & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: left top;
       transition: all ease-in-out 0.5s;
-
-      @media (max-width: 1280px) {
-        object-position: -133px top;
+      @include bp(lg) {
+        object-position: -200px top;
       }
+
+      @include bp(md) {
+        object-position: -400px top;
+
+        }
       @media (max-width: 936px) {
-        object-position: -356px top;
+        object-position: -500px top;
       }
       @include bp(sm) {
-        object-position: -180px top;
+        object-position: -600px top;
       }
-      @media (max-width: 560px) {
-        object-position: -335px top;
+      @media (max-width: 460px) {
+        object-position: -791px top;
       }
-      @media (max-width: 440px) {
-        object-position: -649px top;
+      @media (max-width: 400px) {
+        object-position: -892px top;
       }
 
     }
@@ -90,11 +99,14 @@
     font-weight: 700;
     font-size: 76px;
     line-height: 91px;
-    color: #000000;
+    color: #fff;
     transition: all ease-in-out 0.2s;
     @media (max-width: 1440px) {
       font-size: 56px;
       line-height: 67px;
+    }
+    @include bp(md) {
+      color: #000000;
     }
     @include bp(sm) {
       font-size: 40px;
@@ -105,11 +117,15 @@
 
 .product-text {
   padding-left: 30px;
-  border-left: 1px solid #000000;
+  border-left: 1px solid #fff;
   transition: all ease-in-out 0.2s;
+  @include bp(md) {
+    border-left: 1px solid #000;
+  }
   @media (max-width: 936px) {
     margin-bottom: 233px;
   }
+
   @include bp(sm) {
     padding-left: 0;
     border-left: none;
@@ -118,7 +134,7 @@
 }
 
 .product-text__inner {
-  max-width: 510px;
+  max-width: 504px;
   @include bp(md) {
     max-width: 621px;
   }
@@ -128,13 +144,19 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 140%;
-    color: #000000;
+    color: #fff;
     transition: all ease-in-out 0.5s;
+
+    & b {
+      font-weight: 600;
+    }
+
     @media (max-width: 1440px) {
       font-size: 16px;
     }
     @include bp(md) {
       font-size: 20px;
+      color: #000;
     }
     @include bp(xs) {
       font-size: 16px;
@@ -239,16 +261,17 @@
     align-items: center;
     text-align: center;
     border-radius: 50%;
-    border: 4.81139px solid $action;
+    border: 4px solid $action;
     transition: all ease-in-out 0.2s;
+    padding: 0 56px;
 
     &:before {
       content: "";
       position: absolute;
-      width: calc(100% - 38px);
-      height: calc(100% - 38px);
+      width: calc(100% - 24px);
+      height: calc(100% - 24px);
       border-radius: 50%;
-      border: 4.81139px solid $brand;
+      border: 4px solid $brand;
     }
 
     & span {
@@ -264,18 +287,36 @@
     }
   }
 
+  &:nth-child(2) {
+    & > div {
+      padding: 0 50px;
+      @media (max-width: 1440px) {
+        padding: 0 37px;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    & > div {
+      padding: 0 56px;
+      @media (max-width: 1440px) {
+        padding: 0 54px;
+      }
+    }
+  }
+
   &:nth-child(1) {
     //top: 44px;
     //left: 183px;
     top: -224px;
     left: 183px;
     @media (max-width: 1640px) {
-      top: -380px;
-      left: 441px;
+      top: -354px;
+      left: 593px;
     }
     @media (max-width: 1440px) {
-      top: -192px;
-      left: 441px;
+      top: -222px;
+      left: 481px;
     }
     @media (max-width: 1380px) {
       top: -11px;
@@ -300,10 +341,10 @@
     }
 
     & span {
-      width: 254px;
+      //width: 254px;
       transition: all ease-in-out 0.2s;
       @include bp(md) {
-        width: 181px;
+        //width: 181px;
       }
     }
 
@@ -316,7 +357,7 @@
     top: -139px;
     left: 971px;
     @media (max-width: 1640px) {
-      top: -321px;
+      top: -36px;
       left: 1023px;
     }
     @media (max-width: 1440px) {
@@ -344,10 +385,7 @@
     }
 
     & span {
-      width: 137px;
-      @include bp(md) {
-        width: 151px;
-      }
+      //width: 151px;
     }
 
   }
@@ -357,6 +395,10 @@
     //left: 251px;
     top: 240px;
     left: 34px;
+    @media (max-width: 1560px) {
+      top: 182px;
+      left: 34px;
+      }
     @media (max-width: 1440px) {
       top: 240px;
       left: 363px;
@@ -382,9 +424,9 @@
     }
 
     & span {
-      width: 309px;
+      //width: 309px;
       @media (max-width: 1440px) {
-        width: 285px;
+        //width: 285px;
       }
     }
 
@@ -421,10 +463,10 @@
     }
 
     & span {
-      width: 272px;
+      //width: 272px;
       transition: all ease-in-out 0.2s;
       @media (max-width: 1440px) {
-        width: 220px;
+        //width: 220px;
       }
     }
 
@@ -436,8 +478,8 @@
     top: 26px;
     left: 507px;
     @media (max-width: 1640px) {
-      top: -29px;
-      left: 568px;
+      top: 24px;
+      left: 460px;
     }
     @media (max-width: 1440px) {
       top: 29px;
@@ -463,9 +505,9 @@
     }
 
     & span {
-      width: 319px;
+      //width: 319px;
       @media (max-width: 1440px) {
-        width: 293px;
+        //width: 293px;
       }
     }
   }
@@ -476,10 +518,10 @@
   border-left: 1px solid #fff;
   transition: all ease-in-out 0.2s;
   @media (max-width: 1380px) {
-    margin-top: 281px;
+    margin-top: 270px;
   }
   @include bp(md) {
-    margin-top: 100px;
+    margin-top: 190px;
   }
   @include bp(sm) {
     margin-top: 0;

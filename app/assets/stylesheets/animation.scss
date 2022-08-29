@@ -47,6 +47,19 @@
   }
 }
 
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px) rotate(0deg);
+    transform: translateY(-20px) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(-90deg);
+    transform: translateY(0) rotate(-90deg);
+  }
+}
+
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -143,6 +156,7 @@
     opacity: 1;
   }
 }
+
 @-webkit-keyframes bounceInLeft {
   0% {
     opacity: 0;
@@ -222,6 +236,7 @@
     transform: translateX(0);
   }
 }
+
 @-webkit-keyframes bounceInRight {
   0% {
     opacity: 0;
@@ -301,6 +316,7 @@
     transform: translateX(0);
   }
 }
+
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -347,6 +363,7 @@
     transform: translateY(0);
   }
 }
+
 @-webkit-keyframes bounceIn {
   0% {
     opacity: 0;
@@ -425,6 +442,7 @@
     transform: scale(1);
   }
 }
+
 @-webkit-keyframes moveUp {
   0% {
     opacity: 1;
@@ -483,6 +501,7 @@
     background: #464646;
   }
 }
+
 @-o-keyframes fadeBgColor {
   0% {
     background: none;
@@ -494,6 +513,7 @@
     background: #464646;
   }
 }
+
 @keyframes fadeBgColor {
   0% {
     background: none;
@@ -510,50 +530,59 @@
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
 }
+
 .animated.animationDelayMed {
   animation-delay: 1.2s;
   -webkit-animation-delay: 1.2s;
 }
+
 .animated.animationDelayLong {
   animation-delay: 1.6s;
   -webkit-animation-delay: 1.6s;
 }
+
 .animated.fadeBgColor {
   -webkit-animation-name: fadeBgColor;
   -moz-animation-name: fadeBgColor;
   -o-animation-name: fadeBgColor;
   animation-name: fadeBgColor;
 }
+
 .animated.bounceIn {
   -webkit-animation-name: bounceIn;
   -moz-animation-name: bounceIn;
   -o-animation-name: bounceIn;
   animation-name: bounceIn;
 }
+
 .animated.bounceInRight {
   -webkit-animation-name: bounceInRight;
   -moz-animation-name: bounceInRight;
   -o-animation-name: bounceInRight;
   animation-name: bounceInRight;
 }
+
 .animated.bounceInLeft {
   -webkit-animation-name: bounceInLeft;
   -moz-animation-name: bounceInLeft;
   -o-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
 }
+
 .animated.fadeIn {
   -webkit-animation-name: fadeIn;
   -moz-animation-name: fadeIn;
   -o-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
 .animated.fadeInDown {
   -webkit-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
   -o-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
+
 .animated.fadeInUp {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
