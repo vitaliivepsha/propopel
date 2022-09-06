@@ -112,13 +112,13 @@ $(function () {
 
     // show text
 
-    $(".show-text").click(function () {
-        $(".advantages-seo").addClass("active");
-    });
-
-    $(".hide-text").click(function () {
-        $(".advantages-seo").removeClass("active");
-    });
+    // $(".show-text").click(function () {
+    //     $(".advantages-seo").addClass("active");
+    // });
+    //
+    // $(".hide-text").click(function () {
+    //     $(".advantages-seo").removeClass("active");
+    // });
 
     // spoller
 

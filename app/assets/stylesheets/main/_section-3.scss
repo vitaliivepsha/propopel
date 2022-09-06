@@ -188,6 +188,7 @@
   pointer-events: none;
   @include bp(sm) {
     pointer-events: auto;
+    cursor: pointer;
   }
 
   &.active {
@@ -431,23 +432,23 @@
 }
 
 .seo-text {
-  position: relative;
-  height: 126px;
-  overflow: hidden;
-  @include bp(xs) {
-    height: 248px;
-  }
+//  position: relative;
+//  height: 126px;
+//  overflow: hidden;
+//  @include bp(xs) {
+//    height: 248px;
+//  }
 
-  &:before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 53px;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(243, 244, 237, 0) 0%, rgba(243, 244, 237, 0.786458) 43.43%, #F3F4ED 100%);
-    z-index: 1;
-  }
+  //&:before {
+  //  position: absolute;
+  //  content: "";
+  //  width: 100%;
+  //  height: 53px;
+  //  left: 0;
+  //  bottom: 0;
+  //  background: linear-gradient(180deg, rgba(243, 244, 237, 0) 0%, rgba(243, 244, 237, 0.786458) 43.43%, #F3F4ED 100%);
+  //  z-index: 1;
+  //}
 
   & h1, h2 {
     margin: 0;
