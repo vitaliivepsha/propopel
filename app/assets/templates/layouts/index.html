@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#003174">
 </head>
 
-<body style="display: none; opacity: 0; transition: opacity 0.6s linear;">
+<body style="display: flex; opacity: 0;">
 
 ${require('../parts/header.html')}
 
@@ -97,11 +97,18 @@ ${require('../parts/header.html')}
         </div>
         <div class="main-bg">
             <picture>
+                <source media="(max-width: 574px)" srcset="../../images/pixel.webp"
+                        data-original="../../images/main-bg-mob.webp"
+                        class="lazy-web" type="image/webp">
+                <source media="(max-width: 574px)" srcset="../../images/pixel.png" data-original="../../images/main-bg-mob.png" class="lazy-web"
+                        type="image/png">
                 <source srcset="../../images/pixel.webp" data-original="../../images/main-bg.webp" class="lazy-web"
                         type="image/webp">
                 <source srcset="../../images/pixel.png" data-original="../../images/main-bg.png" class="lazy-web"
                         type="image/png">
-                <img src="../../images/pixel.png" data-original="../../images/main-bg.png" class="lazy" alt="">
+                <img src="../../images/pixel.png" data-original="../../images/main-bg.png" width="1920" height="985"
+                     class="lazy"
+                     alt="">
             </picture>
         </div>
     </div>
@@ -328,7 +335,10 @@ ${require('../parts/header.html')}
                             <source srcset="../../images/pixel.png" data-original="../../images/leaf.png"
                                     class="lazy-web"
                                     type="image/png">
-                            <img src="../../images/pixel.png" data-original="../../images/leaf.png" class="lazy" alt="">
+                            <img src="../../images/pixel.png" width="530" height="406"
+                                 data-original="../../images/leaf.png"
+                                 class="lazy"
+                                 alt="">
                         </picture>
                     </div>
                     <div class="advantages-list">

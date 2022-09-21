@@ -10,6 +10,7 @@
 
 .mfp-container {
   position: fixed;
+  overflow-y: auto;
   @media (max-width: 900px) {
     padding: 0;
 
@@ -25,8 +26,7 @@
   background-color: $bg;
   width: 1440px;
   max-width: calc(100vw - 30px);
-  height: 100vh;
-  max-height: calc(100vw - 30px);
+  min-height: 670px;
 
   .mfp-close {
     top: 50px;
@@ -37,21 +37,15 @@
     @include bp(sm) {
       top: 0;
     }
+    @media (max-height: 560px) {
+      top: 20px;
+    }
 
     @include bp(xs) {
       right: 5px;
       top: 5px;
       width: 26px;
       height: 26px;
-    }
-    @media (max-width: 570px) {
-      top: -50px;
-    }
-    @media (max-width: 480px) {
-      top: -100px;
-      }
-    @media (max-width: 360px) {
-      top: -150px;
     }
 
     svg {

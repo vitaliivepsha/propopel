@@ -73,13 +73,11 @@
     "purifycss-loader": "^1.0.1",
     "raw-loader": "0.5.1",
     "sass-loader": "^3.1.2",
-    "slick-carousel": "^1.6.0",
     "style-loader": "^0.13.1",
     "stylint": "1.5.6",
     "stylint-loader": "1.0.0",
     "stylus": "0.54.5",
     "stylus-loader": "2.2.0",
-    "sumoselect": "^3.0.5",
     "sweetalert2": "^6.4.3",
     "testem": "1.10.3",
     "truncate-text": "^1.0.2",
@@ -102,14 +100,7 @@
   "author": "Mike Chernobrov <m.chernobrov@rambler-co.ru> (http://rambler-co.ru)",
   "license": "MIT",
   "dependencies": {
-    "ez-plus": "^1.2.1",
-    "jquery-asRange": "^0.3.4",
-    "jquery-validation": "^1.19.3",
-    "jquery.nicescroll": "^3.7.6",
-    "owl.carousel": "^2.3.4",
-    "perfect-scrollbar": "^1.5.0",
-    "pg-calendar": "^1.4.30",
-    "rangeslider-js": "^3.2.1",
+    "slick-carousel": "^1.8.1",
     "sugar": "^2.0.6"
   }
 }

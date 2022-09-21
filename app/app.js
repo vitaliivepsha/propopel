@@ -13,12 +13,8 @@ require('bootstrap-sass');
 // Modules
 var Forms = require('_modules/forms');
 var Popup = require('_modules/popup');
-// var LightGallery = require('_modules/lightgallery');
-// var Slider = require('_modules/slider');
-require('../node_modules/sumoselect/jquery.sumoselect.min');
-// require('../node_modules/ez-plus/src/jquery.ez-plus');
 require('../node_modules/sweetalert2/dist/sweetalert2');
-require('../node_modules/jquery-validation/dist/jquery.validate.min');
+
 
 // Stylesheet entrypoint
 require('_stylesheets/app.scss');
@@ -27,8 +23,6 @@ require('_stylesheets/app.scss');
 $(function () {
     new Forms();
     new Popup();
-    // new LightGallery();
-    // new Slider();
 
     setTimeout(function () {
         $('body').trigger('scroll', doAnimations);
@@ -135,75 +129,6 @@ $(function () {
             }
         }
     });
-
-    // input value
-    //
-    // $('.input, .textarea').blur(function () {
-    //     if ($(this).val()) {
-    //         $(this).closest('.input-wrapper').addClass('active');
-    //     } else {
-    //         $(this).closest('.input-wrapper').removeClass('active');
-    //     }
-    // });
-
-    // select
-
-    // $('.select').SumoSelect({
-    //     forceCustomRendering: true
-    // });
-    //
-    // // show/hide password
-    //
-    // $('.show-password').click(function() {
-    //     if (!$(this).hasClass('active')) {
-    //         $(this).addClass('active').closest('.input-wrapper').find('.input').attr('type', 'text');
-    //     } else{
-    //         $(this).removeClass('active').closest('.input-wrapper').find('.input').attr('type', 'password');
-    //     }
-    // });
-
-    // validation
-
-    // $('.validate-form').each(function() {
-    //     $(this).validate({
-    //         highlight: function(element) {
-    //             $(element).parent().addClass('error');
-    //         },
-    //         unhighlight: function(element) {
-    //             $(element).parent().removeClass('error');
-    //         },
-    //         rules: {
-    //             email: {
-    //                 required: true,
-    //             },
-    //             password: {
-    //                 required: true,
-    //             },
-    //             new_password: {
-    //                 required: true,
-    //             },
-    //             re_password: {
-    //                 required: true,
-    //                 equalTo: '#new_password'
-    //             }
-    //         },
-    //         messages: {
-    //             email: {
-    //                 required: 'Povinné pole',
-    //             },
-    //             password: {
-    //                 required: 'Povinné pole',
-    //             },
-    //             new_password: {
-    //                 required: 'Zadejte nové heslo',
-    //             },
-    //             re_password: {
-    //                 required: 'Odeslat heslo',
-    //                 equalTo: 'Hesla se neshodují'
-    //             }
-    //         }
-    //     });
-    // });
 
     $("#phone").mask("+31 ( 99 ) 999 9999");
 
