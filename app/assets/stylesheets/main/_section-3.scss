@@ -1,9 +1,9 @@
 .advantages-section {
   padding-top: 255px;
-  padding-bottom: 80px;
+  //padding-bottom: 80px;
   background-color: $bg;
   @include bp(md) {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   @include bp(sm) {
@@ -292,17 +292,17 @@
 .advantages-line {
   max-height: 249px;
   margin: 0 auto;
-  margin-bottom: 100px;
+  //margin-bottom: 100px;
   overflow: hidden;
   @media (max-width: 1440px) {
-    margin-bottom: 78px;
+    //margin-bottom: 78px;
     height: 200px;
   }
   @include bp(md) {
     height: 249px;
   }
   @include bp(sm) {
-    margin-bottom: 80px;
+    //margin-bottom: 80px;
     height: 162px;
   }
 
